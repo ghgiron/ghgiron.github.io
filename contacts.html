@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Manual de Competencias PGN</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="HandheldFriendly" content="true" />
+    <link rel="stylesheet" href="assets/css/master.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script type="text/javascript">
+      $(window).on("scroll", function() {
+        if ($(window).scrollTop()) {
+          $("nav").addClass("classNav1");
+        } else {
+          $("nav").removeClass("classNav1");
+        }
+      });
+    </script>
+    <script type="text/javascript">
+      var initialSrc = "assets/media/general/logo_pgn_2019-blanco.png";
+      var scrollSrc = "assets/media/general/logo_pgn_2019-1.png";
+
+      $(window).scroll(function() {
+        var value = $(this).scrollTop();
+        if (value > 100) $(".img").attr("src", scrollSrc);
+        else $(".img").attr("src", initialSrc);
+      });
+    </script>
+  </head>
+  <body>
+    <div class="b-page-wrap">
+      <!-- Loader-->
+      <div id="page-preloader">
+        <div class="loader-wrap"><span class="loader02"></span></div>
+      </div>
+      <!-- Loader end-->
+
+      <!-- Prueba nuevo menu -->
+      <nav class="nav">
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fa fa-bars"></i>
+        </label>
+        <div class="logo">
+          <img
+            class="img"
+            src="assets/media/general/logo_pgn_2019-blanco.png"
+            alt="logo procuraduria general de la nacion"
+          />
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="factores.html">factores de competencia</a></li>
+          <li><a href="normatividad.html">normatividad</a></li>
+          <li><a class="active" href="dependencias.html">dependencias</a></li>
+          <li>
+            <a href="estructuraestado.html"
+              >estructura del estado y de la pgn</a
+            >
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+              >directorio<span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="notarias.html" style="line-height: 30px;">Notarías</a>
+              </li>
+              <li>
+                <a href="camarascomercio.html" style="line-height: 30px;"
+                  >Camaras de Comercio</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav> 
+      <!-- fin prueba nuevo mnenu -->
+
+            <div class="b-page-content map-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 text-center">
+                            <!-- Breadcrumbs -->
+                            <div class="b-breadcrumbs wow slideInDown">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="index-1.html">
+                                            inicio
+                                        </a>
+                                    </li>
+                                    <li class="current">
+                                        gestión de dependencias
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="heading-text">
+                                <p>
+                                    Diligencie la información requerida para la creación de las dependencias
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-map-form-holder">
+                    <div class="b-contact-form">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-offset-3">
+                                    <!-- Modded Form for simple valid check -->
+                                    <form id="contact-form" class="b-form form-check" method="get" action="#">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 form-check-line">
+                                                    <input type="text" pattern=".{3,}" class="required-field form-control" id="user-name" placeholder="Your Name">
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 form-check-line">
+                                                    <input type="email" pattern=".{3,}" class="required-field mailfield form-control" id="user-email" placeholder="Your Email" autocomplete="off">
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 form-check-line">
+                                                    <input type="text" pattern=".{3,}" class="required-field form-control" id="user-subject" placeholder="Subject" autocomplete="off">
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 form-check-line">
+                                                    <textarea id="user-message" class="required-field textfield form-control" rows="6" placeholder="Message"></textarea>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12">
+                                                    <button type="submit" class="btn btn-submit text-uppercase">
+                                                        Send Message
+                                                    </button>
+                                                    <div class="send-alert send-success">
+                                                        Your message was sent successfully. Thanks!
+                                                    </div>
+                                                    <div class="send-alert send-error">
+                                                        Please check the form carefully for errors!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="b-footer-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-4">
+                            <div class="b-socials">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="https://www.facebook.com/">
+                                            <i class="fa fa-facebook fa-fw" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/">
+                                            <i class="fa fa-twitter fa-fw" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.pinterest.com/">
+                                            <i class="fa fa-pinterest fa-fw" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://vk.com/">
+                                            <i class="fa fa-vk fa-fw" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.behance.net/">
+                                            <i class="fa fa-behance fa-fw" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="copy">
+                                &copy; 2017 Futurico <sup>&reg;</sup> All Right Reserved
+                            </p>
+                            <a href="index-2.html" class="footer-logo">
+                                <img src="assets/media/general/logo-footer.png" alt="/">
+                            </a>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-2">
+                            <div class="b-footer-box">
+                                <h5 class="footer-box-title">
+                                    Links
+                                </h5>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="index-1.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="service-1.html">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Support</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sign In</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-2">
+                            <div class="b-footer-box">
+                                <h5 class="footer-box-title">
+                                    About Us
+                                </h5>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="about-1.html">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-single.html">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="contacts.html">Contact Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="gallery-single.html">Gallery</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-3 col-md-2">
+                            <div class="b-footer-box">
+                                <h5 class="footer-box-title">
+                                    About Us
+                                </h5>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#">Privacy</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Terms</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Patents</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-2">
+                            <div class="b-footer-box">
+                                <h5 class="footer-box-title">
+                                    Working Hours
+                                </h5>
+                                <p>
+                                    Monday-Friday:8am-8pm<br>Saturday 9am-1pm
+                                </p>
+                                <p class="footer-mail">
+                                    support@example.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- MAIN SCRIPTS-->
+        <script src="assets/libs/jquery-1.12.4.min.js"></script>
+        <script src="assets/libs/jquery-migrate-1.2.1.js"></script>
+        <!-- Bootstrap-->
+        <script src="assets/libs/bootstrap/bootstrap.min.js"></script>
+        <!-- Adaptive big text -->
+        <script src="assets/plugins/slabText/js/jquery.slabtext.min.js"></script>
+        <!-- Sliders -->
+        <!-- Owl slider -->
+        <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+        <!-- Slick slider -->
+        <script src="assets/plugins/slick/slick.min.js"></script>
+        <!-- Sly slider -->
+        <script src="assets/plugins/slyslider/sly.min.js"></script>
+        <!-- Bx slider -->
+        <script src="assets/plugins/bxslider/vendor/jquery.easing.1.3.js"></script>
+        <script src="assets/plugins/bxslider/vendor/jquery.fitvids.js"></script>
+        <script src="assets/plugins/bxslider/jquery.bxslider.min.js"></script>
+        <!-- Pop-up window-->
+        <script src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <!-- Headers scripts-->
+        <script src="assets/plugins/headers/slidebar.js"></script>
+        <script src="assets/plugins/headers/header.js"></script>
+        <!-- Filter and sorting images-->
+        <script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+        <script src="assets/plugins/isotope/imagesLoaded.js"></script>
+        <!-- Progress numbers-->
+        <script src="assets/plugins/rendro-easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="assets/plugins/rendro-easy-pie-chart/waypoints.min.js"></script>
+        <!-- Entry Animations -->
+        <script src="assets/plugins/wow.min.js"></script>
+        <!-- Calendar plugin -->
+        <script src="assets/plugins/pickmeup/pickmeup.js"></script>
+        <!-- User customization-->
+        <script src="assets/js/custom.js"></script>
+        <!-- User map-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqQ_bBw186KJnMcRByvn5ffZueg88wp1E"></script>//Enter Your API key here
+        <!-- Maps customization-->
+        <script src="assets/js/custom-map.js"></script>
+        <!--Contact form-->
+		<script src="assets/plugins/jqBootstrapValidation.js"></script>
+		<script src="assets/plugins/contact_me.js"></script>
+        <!--Simple check for contact-form-->
+        <script src="assets/js/contactformcheck.js"></script>
+    </body>
+</html>

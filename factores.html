@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Manual de Competencias PGN</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="HandheldFriendly" content="true" />
+    <link rel="stylesheet" href="assets/css/master.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script type="text/javascript">
+      $(window).on("scroll", function() {
+        if ($(window).scrollTop()) {
+          $("nav").addClass("classNav1");
+        } else {
+          $("nav").removeClass("classNav1");
+        }
+      });
+    </script>
+    <script type="text/javascript">
+      var initialSrc = "assets/media/general/logo_pgn_2019-blanco.png";
+      var scrollSrc = "assets/media/general/logo_pgn_2019-1.png";
+
+      $(window).scroll(function() {
+        var value = $(this).scrollTop();
+        if (value > 100) $(".img").attr("src", scrollSrc);
+        else $(".img").attr("src", initialSrc);
+      });
+    </script>
+    <script type="text/javascript">
+      $(function() {
+        // activate scrollspy on sections side navigation
+        $("body").scrollspy({
+          target: ".fixed-side-navbar",
+          offset: 200
+        });
+
+        // smoothscroll on sidenav click
+        $(".fixed-side-navbar a").smoothScroll({
+          offset: -100
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $(function() {
+        // activate scrollspy on sections side navigation
+        $("body").scrollspy({
+          target: ".b-features-column",
+          offset: 200
+        });
+
+        // smoothscroll on sidenav click
+        $(".b-features-column a").smoothScroll({
+          offset: -100
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="b-page-wrap">
+      <!-- Loader-->
+      <div id="page-preloader">
+        <div class="loader-wrap"><span class="loader02"></span></div>
+      </div>
+      <!-- Loader end-->
+
+      <!-- Prueba nuevo menu -->
+      <nav class="nav">
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fa fa-bars"></i>
+        </label>
+        <div class="logo">
+          <img
+            class="img"
+            src="assets/media/general/logo_pgn_2019-blanco.png"
+            alt="logo procuraduria general de la nacion"
+          />
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">INICIO</a></li>
+          <li>
+            <a class="active" href="factores.html">factores de competencia</a>
+          </li>
+          <li><a href="normatividad.html">normatividad</a></li>
+          <li><a href="dependencias.html">dependencias</a></li>
+          <li>
+            <a href="estructuraestado.html"
+              >estructura del estado y de la pgn</a
+            >
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+              >directorio<span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="notarias.html" style="line-height: 30px;">Notarías</a>
+              </li>
+              <li>
+                <a href="camarascomercio.html" style="line-height: 30px;"
+                  >Camaras de Comercio</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- fin prueba nuevo mnenu -->
+
+      <div class="b-page-content with-layer-bg">
+        <!-- ==========================-->
+        <!-- PAGES BACKGROUND -->
+        <!-- ==========================-->
+        <div class="b-layer">
+          <div class="layer-bg page-layer-bg8">
+            <div class="layer-content">
+              <div class="container wow slideInUp">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 text-center">
+                    <!-- Breadcrumbs -->
+                    <div class="b-breadcrumbs">
+                      <ul class="list-inline">
+                        <li>
+                          <a href="index.html">
+                            INICIO
+                          </a>
+                        </li>
+                        <li class="current">
+                          <a href="dependencias.html">
+                            FACTORES
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <h1 class="main-heading" style="font-size:40px">
+                      FACTORES QUE DETERMINAN LA COMPETENCIA
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SECTIONS SCROLLSPY -->
+        <div class="fixed-side-navbar">
+          <ul class="nav">
+            <li class="active">
+              <a href="#sec1"><span>Calidad del Sujeto disciplinable</span></a>
+            </li>
+            <li>
+              <a href="#sec2"><span> Naturaleza del Hecho</span></a>
+            </li>
+            <li>
+              <a href="#sec3"><span> Factor Territorial</span></a>
+            </li>
+            <li>
+              <a href="#sec4"><span> Factor de Conexidad</span></a>
+            </li>
+            <li>
+              <a href="#sec5"><span>Factor Funcional</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="b-layer-main">
+          <div class="page-arrow">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+          <div
+            class="b-blog-single"
+            style="margin-top: 0; margin-bottom: 120px;"
+          >
+            <div class="b-latest" style="border: none; padding-top: 0;">
+              <div class="container">
+                <div class="row">
+                  <!-- Info columns -->
+                  <div
+                    class="b-info-columns-holder b-steps-list col-xs-12 col-sm-12 wow zoomIn"
+                    style="visibility: visible; animation-name: wow zoomIn;padding-top: 0;"
+                  >
+                    <div
+                      class="col-xs-12 col-sm-12 text-center"
+                      style="padding-bottom: 120px;"
+                    >
+                      <h3 class="big-title-mod" style="font-size: 35px;">
+                        Una investigación disciplinaria puede originarse por
+                      </h3>
+                    </div>
+                    <div class="row equal">
+                      <div class="b-info-column col-xs-4 col-sm-4">
+                        <div class="info-column-icon">
+                          <i class="flaticon-user"></i>
+                          <span class="step-number">
+                            1
+                          </span>
+                        </div>
+                        <h7 class="info-column-title" style="font-size: 18px;">
+                          Una queja presentada por un <br />
+                          ciudadano identificado o anónimo
+                        </h7>
+                      </div>
+                      <div class="b-info-column col-xs-4 col-sm-4">
+                        <div class="info-column-icon">
+                          <i class="icon fa fa-users"></i>
+                          <span class="step-number">
+                            2
+                          </span>
+                        </div>
+                        <h7 class="info-column-title" style="font-size: 18px;">
+                          Informe presentado por <br />
+                          cualquier servidor público
+                        </h7>
+                      </div>
+                      <div class="b-info-column col-xs-4 col-sm-4">
+                        <div class="info-column-icon">
+                          <i class="icon fa fa-user-secret"></i>
+                          <span class="step-number">
+                            3
+                          </span>
+                        </div>
+                        <h7 class="info-column-title" style="font-size: 18px;">
+                          De oficio cuando el funcionario investigador <br />
+                          actúe motivado por informaciones provenientes <br />
+                          de un servidor público o de otro medio que amerite
+                          credibilidad.
+                        </h7>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="b-awards">
+            <div class="container">
+              <div class="row">
+                <div class="b-awards-info clearfix">
+                  <div
+                    class="col-xs-12 col-sm-4 wow fadeInLeft"
+                    style="visibility: visible; animation-name: fadeInLeft;"
+                  >
+                    <h3 class="heading-line">
+                      La competencia
+                    </h3>
+                  </div>
+                  <div
+                    class="col-xs-12 col-sm-4 wow fadeIn"
+                    style="visibility: visible; animation-name: fadeIn;"
+                  >
+                    <div class="b-text">
+                      <p>
+                        Para el conocimiento de las quejas se determinará
+                        teniendo en cuenta la calidad del sujeto disciplinable,
+                        la naturaleza del hecho, el territorio donde se cometió
+                        la falta, el factor funcional y el de conexidad.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="col-xs-12 col-sm-4 wow fadeInRight"
+                    style="visibility: visible; animation-name: fadeInRight;"
+                  >
+                    <div class="b-text">
+                      <p>
+                        En los casos en que resulte incompatible la aplicación
+                        de los factores territorial y funcional, para determinar
+                        la competencia, prevalecerá este último.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FACTORES DE COMPETENCIA -->
+
+          <div class="b-features-columns-holder">
+            <div class="container">
+              <div class="row equal">
+                <div class="wave-bg"></div>
+                <div
+                  class="col-xs-6 col-sm-6 col-md-4 wow slideInLeft"
+                  style="visibility: visible; animation-name: slideInLeft;"
+                >
+                  <div
+                    class="b-features-column"
+                    style="height: 300px; max-height: 300px;"
+                  >
+                    <div class="features-column-icon">
+                      <i class="icon fa fa-map-signs"></i>
+                    </div>
+                    <h6 class="features-column-title">
+                      Calidad del Sujeto Disciplinable <br> (factor subjetivo)
+                    </h6>
+
+                    <a
+                      href="#sec1"
+                      class="btn btn-primary"
+                      style="font-size: 11px; padding: 10px;"
+                      style="font-size: 11px; padding: 10px;"
+                    >
+                      Consultar
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="col-xs-6 col-sm-6 col-md-4 wow slideInLeft"
+                  style="visibility: visible; animation-name: slideInLeft;"
+                >
+                  <div
+                    class="b-features-column"
+                    style="height: 300px; max-height: 300px;"
+                  >
+                    <div class="features-column-icon">
+                      <i class="flaticon-tool-1"></i>
+                    </div>
+                    <h6 class="features-column-title">
+                      Naturaleza del hecho (factor objetivo)
+                    </h6>
+
+                    <a
+                      href="#sec2"
+                      class="btn btn-primary"
+                      style="font-size: 11px; padding: 10px;"
+                    >
+                      Consultar
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="col-xs-6 col-sm-6 col-md-4 wow slideInLeft"
+                  style="visibility: visible; animation-name: slideInLeft;"
+                >
+                  <div
+                    class="b-features-column"
+                    style="height: 300px; max-height: 300px;"
+                  >
+                    <div class="features-column-icon">
+                      <i class="flaticon-tool-1"></i>
+                    </div>
+                    <h6 class="features-column-title">
+                      Factor territorial (Resolución 213 de 2003)
+                    </h6>
+
+                    <a
+                      href="#sec3"
+                      class="btn btn-primary"
+                      style="font-size: 11px; padding: 10px;"
+                    >
+                      Consultar
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="col-xs-6 col-sm-6 col-md-6 wow slideInRight"
+                  style="visibility: visible; animation-name: slideInRight;"
+                >
+                  <div
+                    class="b-features-column"
+                    style="height: 300px; max-height: 300px;"
+                  >
+                    <div class="features-column-icon">
+                      <i class="flaticon-tool-1"></i>
+                    </div>
+                    <h6 class="features-column-title">
+                      Factor de conexidad
+                    </h6>
+
+                    <a
+                      href="#sec4"
+                      class="btn btn-primary"
+                      style="font-size: 11px; padding: 10px;"
+                    >
+                      Consultar
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="col-xs-6 col-sm-6 col-md-6 wow slideInRight"
+                  style="visibility: visible; animation-name: slideInRight;"
+                >
+                  <div
+                    class="b-features-column"
+                    style="height: 300px; max-height: 300px;"
+                  >
+                    <div class="features-column-icon">
+                      <i class="flaticon-tool-1"></i>
+                    </div>
+                    <h6 class="features-column-title">
+                      Factor funcional
+                    </h6>
+
+                    <a
+                      href="#sec5"
+                      class="btn btn-primary"
+                      style="font-size: 11px; padding: 10px;"
+                    >
+                      Consultar
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTENIDO FACTORES DE COMPETENCIA -->
+          <div class="container">
+            <section id="sec1">
+              <div class="row" style="padding-top: 100px;">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <div class="b-blog-single-content wow slideInLeft">
+                    <div
+                      class="blog-item-content clearfix"
+                      style="padding-left: 70px; padding-right: 70px; padding-top: 50px;padding-top: 30px; padding-bottom: 30px;"
+                    >
+                      <div class="blog-item-caption">
+                        <h4 class="item-name">
+                          Calidad del Sujeto Disciplinable
+                        </h4>
+
+                        <h5 class="small-title">
+                          Factor Subjetivo
+                        </h5>
+                      </div>
+
+                      <div class="b-text wow fadeInUp">
+                        <p style="font-size: 18px; padding:35px ;">
+                          Servidores públicos. Se tendrá en cuenta el cargo.
+                        </p>
+                        <div
+                          class="b-text-list"
+                          style=" padding-left: 60px;padding-right: 80px; padding-bottom: 1px;"
+                        >
+                          <ul class="list-unstyled">
+                            <li>
+                              <div class="liG" style=" line-height: 1.9 ">
+                                01
+                              </div>
+                              <div class="content">
+                                <p>
+                                  Si es igual o superior a Secretario General de
+                                  entidades del orden nacional, corresponde a
+                                  las Procuradurías Delegadas.
+                                </p>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="liG" style=" line-height: 1.9 ">
+                                02
+                              </div>
+                              <div class="content">
+                                <p>
+                                  Si es inferior a Secretario General de
+                                  entidades del orden nacional con sede
+                                  diferente a Bogotá, corresponde a las
+                                  Procuradurías Regionales.
+                                </p>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="liG" style=" line-height: 1.9 ">
+                                03
+                              </div>
+                              <div class="content">
+                                <p>
+                                  Si es inferior a Secretario General de
+                                  entidades del orden municipal, corresponde a
+                                  las Procuradurías Provinciales.
+                                </p>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="liG" style=" line-height: 1.9 ">
+                                04
+                              </div>
+                              <div class="content">
+                                <p>
+                                  Si es inferior a Secretario General de
+                                  entidades del orden nacional y distrital con
+                                  sede en Bogotá, corresponde a las
+                                  Procuradurías Distritales.
+                                </p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <p style="font-size: 18px; padding:35px ; ">
+                          Particulares disciplinables. Se tendrá en cuenta la
+                          naturaleza jurídica de la entidad (orden nacional,
+                          departamental, municipal, distrital)
+                        </p>
+                        <br />
+                        <p
+                          class="small-title"
+                          style="font-size: 18px; padding-left:35px ; padding-right: 30px;"
+                        >
+                          <a
+                            href="http://www.secretariasenado.gov.co/senado/basedoc/ley_0734_2002.html"
+                            target="_blank"
+                            class="glink"
+                          >
+                            Ley 734 de 2002. Artículo 75</a
+                          >. Competencia por la calidad del sujeto
+                          disciplinable.
+                        </p>
+
+                        <p
+                          style="font-size: 18px; padding-left:35px ; padding-right: 30px; padding-bottom: 50px;"
+                        >
+                          Corresponde a las entidades y órganos del Estado, a
+                          las administraciones central y descentralizada
+                          territorialmente y por servicios, disciplinar a sus
+                          servidores o miembros.
+                          <br />
+                          <br />
+                          El particular disciplinable conforme a este código lo
+                          será exclusivamente por la Procuraduría General de la
+                          Nación, salvo lo dispuesto en el artículo 59 de este
+                          código, cualquiera que sea la forma de vinculación y
+                          la naturaleza de la acción u omisión.
+                          <br />
+                          <br />
+                          Cuando en la comisión de una o varias faltas
+                          disciplinarias conexas intervengan servidores públicos
+                          y particulares disciplinables la competencia radicará
+                          exclusivamente en la Procuraduría General de la Nación
+                          y se determinará conforme a las reglas de competencia
+                          que gobiernan a los primeros.
+                          <br /><br />
+                          Las personerías municipales y distritales se
+                          organizarán de tal forma que cumplan con el principio
+                          de la doble instancia, correspondiendo la segunda en
+                          todo caso al respectivo personero. Donde ello no fuere
+                          posible la segunda instancia le corresponderá al
+                          respectivo Procurador Regional.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="sec2">
+              <div class="row" style="padding-top: 50px; ">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <div class="b-blog-single-content wow slideInLeft">
+                    <div
+                      class="blog-item-content clearfix"
+                      style="padding-left: 70px; padding-right: 70px; padding-top: 30px; padding-bottom: 30px;"
+                    >
+                      <div class="blog-item-caption">
+                        <h4 class="item-name">
+                          Naturaleza del Hecho
+                        </h4>
+                        <h5 class="small-title">
+                          Factor Objetivo
+                        </h5>
+                        <br />
+                        <h5 class="small-title">
+                          Clase o tipo del hecho.
+                        </h5>
+                      </div>
+
+                      <div class="b-text wow fadeInUp">
+                        <p style="font-size: 18px; padding:30px ;">
+                          Se tendrá en cuenta la primacía o importancia para
+                          asignar la competencia: violación de derechos humanos
+                          y DIH, presupuesto, contratación, administrativa,
+                          falta (leve, grave, gravísima).
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="sec3">             
+              <div class="row" style="padding-top: 50px;">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <div class="b-blog-single-content wow slideInLeft">
+                    <div
+                      class="blog-item-content clearfix"
+                      style="padding-left: 70px; padding-right: 70px; padding-top: 50px;padding-top: 30px; padding-bottom: 30px;"
+                    >
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" >
+                        <div class="blog-item-caption">
+                        <h4 class="item-name" >
+                          Factor Territorial
+                        </h4>
+                        </div>
+                        <h5 class="small-title" style="padding-left: 35px;">
+                          <a
+                            href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad//1705_resolucion213-03-H.pdf"
+                            class="glink"
+                            target="_blank"
+                            >Resolución 213 de 2003
+                          </a>
+                        </h5>
+                      </div>
+                    
+                      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" style="text-align: right;" >
+                        <div class="blog-item-caption">                       
+                          <a href="https://www.procuraduria.gov.co/portal/sedes.page" target="_blank" class="btn btn-primary" style="border: 1px solid #655e5e52; font-size:.8em">Ver Procuradurías a Nivel Territorial</a>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                      <div class="b-text wow fadeInUp">
+                        <div
+                          class="b-text-list"
+                          style=" padding-left: 60px;padding-right: 80px; padding-bottom: 1px;"
+                        >
+                          <ul class="list-unstyled">
+                            <li>
+                              <div class="liG" style=" line-height: 1.9 ">
+                                01
+                              </div>
+                              <div class="content">
+                                <p>
+                                  Será competente el funcionario del lugar donde
+                                  ocurrieron los hechos.
+                                </p>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="liG" style=" line-height: 1.9 ">
+                                02
+                              </div>
+                              <div class="content">
+                                <p>
+                                  Cuando la falta se haya cometido en diferentes
+                                  lugares, conocerá el funcionario competente
+                                  que primero hubiere iniciado la investigación.
+                                </p>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="liG" style=" line-height: 1.9 ">
+                                03
+                              </div>
+                              <div class="content">
+                                <p>
+                                  Sede del implicado
+                                </p>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="liG" style=" line-height: 1.9 ">
+                                04
+                              </div>
+                              <div class="content">
+                                <p>
+                                  Las Procuradurías Regionales tienen
+                                  competencia en los municipios que conforman
+                                  las Procuradurías Provinciales adscritas a
+                                  ellas.
+                                </p>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="liG" style=" line-height: 1.9 ">
+                                05
+                              </div>
+                              <div class="content">
+                                <p>
+                                  Se debe consultar la Resolución 213 de 2002,
+                                  teniendo en cuenta el departamento al cual
+                                  pertenece el municipio, toda vez que pueden
+                                  existir varios municipios con el mismo nombre
+                                  pertenecientes a diferentes departamentos.
+                                </p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <br />
+                        <p
+                          class="small-title"
+                          style="font-size: 18px; padding-left:35px ; padding-right: 30px; margin:0; padding-bottom: 0;"
+                        >
+                          Ley 734 de 2002. Artículo 80. El factor territorial.
+                        </p>
+
+                        <p style="font-size: 18px; padding:35px ; ">
+                          Es competente en materia disciplinaria el funcionario
+                          del territorio donde se realizó la conducta. Cuando no
+                          puedan ser adelantados por las correspondientes
+                          oficinas de control interno disciplinario, las faltas
+                          cometidas por los servidores públicos en el exterior y
+                          en el ejercicio de sus funciones, corresponderán a los
+                          funcionarios que, de acuerdo con el factor objetivo y
+                          subjetivo, fueren competentes en el Distrito Capital.
+                          Cuando la falta o faltas fueren cometidas en diversos
+                          lugares del territorio nacional, conocerá el
+                          funcionario competente que primero hubiere iniciado la
+                          investigación.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="sec4">
+              <div class="row" style="padding-top: 50px;">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <div class="b-blog-single-content wow slideInLeft">
+                    <div
+                      class="blog-item-content clearfix"
+                      style="padding-left: 70px; padding-right: 70px; padding-top: 50px;padding-top: 30px; padding-bottom: 60px;"
+                    >
+                      <div class="blog-item-caption">
+                        <h4 class="item-name">
+                          Factor de Conexidad
+                        </h4>
+
+                        <h5 class="small-title">
+                          Conocimiento de un asunto específico con base en la
+                          competencia previamente señalada para otro. <br />
+                          (C-231 – 2019-PGN)
+                        </h5>
+                      </div>
+
+                      <div class="b-text wow fadeInUp">
+                        <br />
+                        <p
+                          style="font-size: 18px; padding-left:35px ; padding-right: 30px; margin:0; padding-bottom: 0;"
+                        >
+                          <span class="small-title">
+                            Ley 734 de 2002. Artículo 81.
+                          </span>
+                          Competencia por razón de la conexidad. Cuando un
+                          servidor público cometa varias faltas disciplinarias
+                          conexas, se investigarán y decidirán en un solo
+                          proceso. Cuando varios servidores públicos de la misma
+                          entidad participen en la comisión de una falta o de
+                          varias que sean conexas, se investigarán y decidirán
+                          en el mismo proceso, por quien tenga la competencia
+                          para juzgar al de mayor jerarquía.
+                        </p>
+                        <br />
+                        <p
+                          style="font-size: 18px; padding-left:35px ; padding-right: 30px; margin:0; padding-bottom: 0;"
+                        >
+                          <span class="small-title">
+                            Artículo 82. Conflicto de competencias.
+                          </span>
+                          El funcionario que se considere incompetente para
+                          conocer de una actuación disciplinaria deberá
+                          expresarlo remitiendo el expediente en el estado en
+                          que se encuentre, en el menor tiempo posible, a quien
+                          por disposición legal tenga atribuida la competencia.
+                          Si el funcionario a quien se remite la actuación
+                          acepta la competencia, avocará el conocimiento del
+                          asunto; en caso contrario, lo remitirá al superior
+                          común inmediato, con el objeto de que este dirima el
+                          conflicto. El mismo procedimiento se aplicará cuando
+                          ambos funcionarios se consideren competentes. El
+                          funcionario de inferior nivel no podrá promover
+                          conflicto de competencia al superior, pero podrá
+                          exponer las razones que le asisten y aquel, de plano,
+                          resolverá lo pertinente.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="sec5">
+              <div class="row" style="padding-top: 50px; ">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <div class="b-blog-single-content wow slideInLeft">
+                    <div
+                      class="blog-item-content clearfix"
+                      style="padding-left: 70px; padding-right: 70px; padding-top: 30px; padding-bottom: 30px;"
+                    >
+                      <div class="blog-item-caption">
+                        <h4 class="item-name">
+                          Factor Funcional
+                        </h4>
+                      </div>
+
+                      <div class="b-text wow fadeInUp">
+                        <p style="font-size: 18px; padding:30px ;">
+                          Se refiere a las condiciones y calidades del
+                          funcionario a quien corresponde adelantar la
+                          investigación y fallar el proceso.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- --------- -->
+          
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="b-footer-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <a href="https://www.procuraduria.gov.co/portal/" target="_blank">
+                <img
+                  class="img-responsive"
+                  alt="logo Procuraduría General de la Nación"
+                  title="logo Procuraduría General de la Nación"
+                  src="/assets/media/general/logo_pgn_2019-1.png"
+                  style="width: 90px;"
+                />
+              </a>
+
+              <p class="copy">
+                MANUAL DE COMPETENCIAS
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="b-footer-box">
+                <h5 class="footer-box-title">
+                  Centro de Atención al Público, CAP
+                </h5>
+                <ul class="list-unstyled">
+                  <li>
+                    Carrera 5 # 15-80, Bogotá D.C., Colombia
+                  </li>
+                  <li>
+                    Código postal: 110321
+                  </li>
+                  <li>
+                    Horario de atención: 8 a.m. a 5 p.m.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="b-footer-box">
+                <h5 class="footer-box-title">
+                  DEPENDENCIAS
+                </h5>
+                <p>
+                  <a href="funcionInterventiva.html">Función Preventiva</a>
+                </p>
+                <p>
+                  <a href="funciondisciplinaria.html">Función Disciplinaria</a>
+                </p>
+                <p>
+                  <a href="funciondeintervencion">Función de Intervención</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- MAIN SCRIPTS-->
+    <script src="assets/libs/jquery-1.12.4.min.js"></script>
+    <script src="assets/libs/jquery-migrate-1.2.1.js"></script>
+    <!-- Bootstrap-->
+    <script src="assets/libs/bootstrap/bootstrap.min.js"></script>
+    <!-- Adaptive big text -->
+    <script src="assets/plugins/slabText/js/jquery.slabtext.min.js"></script>
+    <!-- Sliders -->
+    <!-- Owl slider -->
+    <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <!-- Slick slider -->
+    <script src="assets/plugins/slick/slick.min.js"></script>
+    <!-- Sly slider -->
+    <script src="assets/plugins/slyslider/sly.min.js"></script>
+    <!-- Bx slider -->
+    <script src="assets/plugins/bxslider/vendor/jquery.easing.1.3.js"></script>
+    <script src="assets/plugins/bxslider/vendor/jquery.fitvids.js"></script>
+    <script src="assets/plugins/bxslider/jquery.bxslider.min.js"></script>
+    <!-- Pop-up window-->
+    <script src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Headers scripts-->
+    <script src="assets/plugins/headers/slidebar.js"></script>
+    <script src="assets/plugins/headers/header.js"></script>
+    <!-- Filter and sorting images-->
+    <script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/plugins/isotope/imagesLoaded.js"></script>
+    <!-- Progress numbers-->
+    <script src="assets/plugins/rendro-easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="assets/plugins/rendro-easy-pie-chart/waypoints.min.js"></script>
+    <!-- Entry Animations -->
+    <script src="assets/plugins/wow.min.js"></script>
+    <!-- Calendar plugin -->
+    <script src="assets/plugins/pickmeup/pickmeup.js"></script>
+    <!-- User customization-->
+    <script src="assets/js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.4/jquery.smooth-scroll.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,492 @@
+@font-face {
+  font-family: 'finance-templ';
+  src:  url('fonts/finance-templ.eot?mnqa1k');
+  src:  url('fonts/finance-templ.eot?mnqa1k#iefix') format('embedded-opentype'),
+    url('fonts/finance-templ.ttf?mnqa1k') format('truetype'),
+    url('fonts/finance-templ.woff?mnqa1k') format('woff'),
+    url('fonts/finance-templ.svg?mnqa1k#finance-templ') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="finance-templ-"], [class*=" finance-templ-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'finance-templ' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.finance-templ-money-11:before {
+  content: "\e900";
+}
+.finance-templ-graphic-4:before {
+  content: "\e901";
+}
+.finance-templ-coins-5:before {
+  content: "\e902";
+}
+.finance-templ-business-7:before {
+  content: "\e903";
+}
+.finance-templ-business-6:before {
+  content: "\e904";
+}
+.finance-templ-interface-1:before {
+  content: "\e905";
+}
+.finance-templ-business-5:before {
+  content: "\e906";
+}
+.finance-templ-arrows:before {
+  content: "\e907";
+}
+.finance-templ-graphic-3:before {
+  content: "\e908";
+}
+.finance-templ-coins-4:before {
+  content: "\e909";
+}
+.finance-templ-people:before {
+  content: "\e90a";
+}
+.finance-templ-pencil:before {
+  content: "\e90b";
+}
+.finance-templ-technology-1:before {
+  content: "\e90c";
+}
+.finance-templ-money-10:before {
+  content: "\e90d";
+}
+.finance-templ-computer:before {
+  content: "\e90e";
+}
+.finance-templ-interface:before {
+  content: "\e90f";
+}
+.finance-templ-agenda:before {
+  content: "\e910";
+}
+.finance-templ-coins-3:before {
+  content: "\e911";
+}
+.finance-templ-justice:before {
+  content: "\e912";
+}
+.finance-templ-business-4:before {
+  content: "\e913";
+}
+.finance-templ-graphic-2:before {
+  content: "\e914";
+}
+.finance-templ-technology:before {
+  content: "\e915";
+}
+.finance-templ-commerce-1:before {
+  content: "\e916";
+}
+.finance-templ-business-3:before {
+  content: "\e917";
+}
+.finance-templ-graphic-1:before {
+  content: "\e918";
+}
+.finance-templ-money-9:before {
+  content: "\e919";
+}
+.finance-templ-business-2:before {
+  content: "\e91a";
+}
+.finance-templ-chart:before {
+  content: "\e91b";
+}
+.finance-templ-hammer:before {
+  content: "\e91c";
+}
+.finance-templ-money-8:before {
+  content: "\e91d";
+}
+.finance-templ-gestures-3:before {
+  content: "\e91e";
+}
+.finance-templ-coins-2:before {
+  content: "\e91f";
+}
+.finance-templ-money-7:before {
+  content: "\e920";
+}
+.finance-templ-business-1:before {
+  content: "\e921";
+}
+.finance-templ-search:before {
+  content: "\e922";
+}
+.finance-templ-commerce:before {
+  content: "\e923";
+}
+.finance-templ-gestures-2:before {
+  content: "\e924";
+}
+.finance-templ-coins-1:before {
+  content: "\e925";
+}
+.finance-templ-money-6:before {
+  content: "\e926";
+}
+.finance-templ-coins:before {
+  content: "\e927";
+}
+.finance-templ-money-5:before {
+  content: "\e928";
+}
+.finance-templ-gestures-1:before {
+  content: "\e929";
+}
+.finance-templ-money-4:before {
+  content: "\e92a";
+}
+.finance-templ-gestures:before {
+  content: "\e92b";
+}
+.finance-templ-money-3:before {
+  content: "\e92c";
+}
+.finance-templ-money-2 .path1:before {
+  content: "\e92d";
+  color: rgb(167, 169, 172);
+}
+.finance-templ-money-2 .path2:before {
+  content: "\e92e";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path3:before {
+  content: "\e92f";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path4:before {
+  content: "\e930";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path5:before {
+  content: "\e931";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path6:before {
+  content: "\e932";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path7:before {
+  content: "\e933";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path8:before {
+  content: "\e934";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path9:before {
+  content: "\e935";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path10:before {
+  content: "\e936";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path11:before {
+  content: "\e937";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path12:before {
+  content: "\e938";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path13:before {
+  content: "\e939";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path14:before {
+  content: "\e93a";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path15:before {
+  content: "\e93b";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path16:before {
+  content: "\e93c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path17:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path18:before {
+  content: "\e93e";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path19:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path20:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path21:before {
+  content: "\e941";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path22:before {
+  content: "\e942";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path23:before {
+  content: "\e943";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path24:before {
+  content: "\e944";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path25:before {
+  content: "\e945";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path26:before {
+  content: "\e946";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path27:before {
+  content: "\e947";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path28:before {
+  content: "\e948";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path29:before {
+  content: "\e949";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path30:before {
+  content: "\e94a";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path31:before {
+  content: "\e94b";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path32:before {
+  content: "\e94c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path33:before {
+  content: "\e94d";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path34:before {
+  content: "\e94e";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path35:before {
+  content: "\e94f";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path36:before {
+  content: "\e950";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-2 .path37:before {
+  content: "\e951";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-graphic:before {
+  content: "\e952";
+}
+.finance-templ-business .path1:before {
+  content: "\e953";
+  color: rgb(167, 169, 172);
+}
+.finance-templ-business .path2:before {
+  content: "\e954";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-business .path3:before {
+  content: "\e955";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-business .path4:before {
+  content: "\e956";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-business .path5:before {
+  content: "\e957";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-credit-card:before {
+  content: "\e958";
+}
+.finance-templ-piggy-bank-1 .path1:before {
+  content: "\e959";
+  color: rgb(167, 169, 172);
+}
+.finance-templ-piggy-bank-1 .path2:before {
+  content: "\e95a";
+  margin-left: -1em;
+  color: rgb(167, 169, 172);
+}
+.finance-templ-piggy-bank-1 .path3:before {
+  content: "\e95b";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-piggy-bank-1 .path4:before {
+  content: "\e95c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-piggy-bank-1 .path5:before {
+  content: "\e95d";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.finance-templ-money-1:before {
+  content: "\e95e";
+}
+.finance-templ-coin-1:before {
+  content: "\e95f";
+}
+.finance-templ-pie-chart:before {
+  content: "\e960";
+}
+.finance-templ-dollar-sign-and-piles-of-coins:before {
+  content: "\e961";
+}
+.finance-templ-presentation:before {
+  content: "\e962";
+}
+.finance-templ-creativity:before {
+  content: "\e963";
+}
+.finance-templ-bar-chart:before {
+  content: "\e964";
+}
+.finance-templ-idea:before {
+  content: "\e965";
+}
+.finance-templ-bars:before {
+  content: "\e966";
+}
+.finance-templ-money:before {
+  content: "\e967";
+}
+.finance-templ-piggy-bank:before {
+  content: "\e968";
+}
+.finance-templ-bitcoin-11:before {
+  content: "\e969";
+}
+.finance-templ-bitcoin-10:before {
+  content: "\e96a";
+}
+.finance-templ-bitcoin-9:before {
+  content: "\e96b";
+}
+.finance-templ-bitcoin-qr-code-on-mobile-phone-screen:before {
+  content: "\e96c";
+}
+.finance-templ-bitcoin-8:before {
+  content: "\e96d";
+}
+.finance-templ-bitcoin-sign:before {
+  content: "\e96e";
+}
+.finance-templ-bitcoin-7:before {
+  content: "\e96f";
+}
+.finance-templ-bitcoin-6:before {
+  content: "\e970";
+}
+.finance-templ-bitcoin-with-olive-leaves-at-both-sides:before {
+  content: "\e971";
+}
+.finance-templ-bitcoin-5:before {
+  content: "\e972";
+}
+.finance-templ-bitcoin-4:before {
+  content: "\e973";
+}
+.finance-templ-bitcoin-3:before {
+  content: "\e974";
+}
+.finance-templ-bitcoin-2:before {
+  content: "\e975";
+}
+.finance-templ-bitcoin-1:before {
+  content: "\e976";
+}
+.finance-templ-money-exchange:before {
+  content: "\e977";
+}
+.finance-templ-coin:before {
+  content: "\e978";
+}
+.finance-templ-bitcoin:before {
+  content: "\e979";
+}
+.finance-templ-bitcoin-logo:before {
+  content: "\e97a";
+}
+.finance-templ-exchange:before {
+  content: "\e97b";
+}
+.finance-templ-bitcoin-coin:before {
+  content: "\e97c";
+}

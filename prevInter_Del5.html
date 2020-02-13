@@ -1,0 +1,2761 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Manual de Competencias PGN</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="HandheldFriendly" content="true" />
+    <link rel="stylesheet" href="assets/css/master.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <script type="text/javascript">
+      $(window).on("scroll", function() {
+        if ($(window).scrollTop()) {
+          $("nav").addClass("classNav1");
+        } else {
+          $("nav").removeClass("classNav1");
+        }
+      });
+    </script>
+    <script type="text/javascript">
+      var initialSrc = "assets/media/general/logo_pgn_2019-blanco.png";
+      var scrollSrc = "assets/media/general/logo_pgn_2019-1.png";
+
+      $(window).scroll(function() {
+        var value = $(this).scrollTop();
+        if (value > 100) $(".img").attr("src", scrollSrc);
+        else $(".img").attr("src", initialSrc);
+      });
+    </script>
+    <script type="text/javascript">
+      $(function() {
+        // activate scrollspy on sections side navigation
+        $("body").scrollspy({
+          target: ".fixed-side-navbar",
+          offset: 200
+        });
+
+        // smoothscroll on sidenav click
+        $(".fixed-side-navbar a").smoothScroll({
+          offset: -100
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $(".panel-collapse").on("show.bs.collapse", function() {
+        $(this)
+          .siblings(".panel-heading")
+          .addClass("active");
+      });
+
+      $(".panel-collapse").on("hide.bs.collapse", function() {
+        $(this)
+          .siblings(".panel-heading")
+          .removeClass("active");
+      });
+    </script>
+  </head>
+  <body>
+    <div class="b-page-wrap">
+      <!-- Loader-->
+      <div id="page-preloader">
+        <div class="loader-wrap"><span class="loader02"></span></div>
+      </div>
+      <!-- Loader end-->
+
+      <!-- Prueba nuevo menu -->
+      <nav class="nav">
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fa fa-bars"></i>
+        </label>
+        <div class="logo">
+          <img
+            class="img"
+            src="assets/media/general/logo_pgn_2019-blanco.png"
+            alt="logo procuraduria general de la nacion"
+          />
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="factores.html">factores de competencia</a></li>
+          <li><a href="normatividad.html">normatividad</a></li>
+          <li><a class="active" href="dependencias.html">dependencias</a></li>
+          <li>
+            <a href="estructuraestado.html"
+              >estructura del estado y de la pgn</a
+            >
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"
+              >directorio<span class="caret"></span
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="notarias.html" style="line-height: 30px;">Notarías</a>
+              </li>
+              <li>
+                <a href="camarascomercio.html" style="line-height: 30px;"
+                  >Camaras de Comercio</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- fin prueba nuevo mnenu -->
+
+      <div class="b-page-content with-layer-bg">
+        <!-- ==========================-->
+        <!-- PAGES BACKGROUND -->
+        <!-- ==========================-->
+        <div class="b-layer">
+          <div class="layer-bg page-layer-bg8">
+            <div class="layer-content">
+              <div class="container wow slideInUp">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 text-center">
+                    <!-- Breadcrumbs -->
+                    <div class="b-breadcrumbs">
+                      <ul class="list-inline">
+                        <li>
+                          <a href="index.html">
+                            INICIO
+                          </a>
+                        </li>
+                        <li class="current">
+                          <a href="dependencias.html">
+                            DEPENDENCIAS
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <h1 class="main-heading" style="font-size: 40px;">
+                      Procuraduría Delegada para la Restitución de Tierras
+                    </h1>
+                    <div class="heading-text">
+                      <p>
+                        Función Preventiva | Función de Intervención
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SECTIONS SCROLLSPY -->
+        <div class="fixed-side-navbar">
+          <ul class="nav">
+            <li class="active">
+              <a href="#sec1"><span>Función Preventiva</span></a>
+            </li>
+            <li>
+              <a href="#sec2"><span>Función de Intervención</span></a>
+            </li>
+            <li>
+              <a href="#sec3"><span>Dependencias Relacionadas</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="b-layer-main">
+          <div class="page-arrow">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+          <div class="b-blog-single">
+            <div class="container">
+              <section id="sec1">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="b-blog-single-content wow slideInLeft">
+                      <div class="blog-item-content clearfix">
+                        <div class="blog-item-caption">
+                          <h4 class="item-name">
+                            Procuraduría Delegada para la Restitución de Tierras
+                          </h4>
+
+                          <h5 class="small-title">
+                            Competencias
+                          </h5>
+                        </div>
+
+                        <div class="b-text wow fadeInUp">
+                          <p
+                            style="font-size: 20px; font-weight: 600; color: #191C1F; text-align: center;"
+                          >
+                            Función Preventiva
+                          </p>
+                          <br />
+                          <div
+                            class="b-single-tags-share clearfix wow fadeInUp"
+                          >
+                            <div class="b-tags pull-left">
+                              <ul class="list-unstyled">
+                                <li>
+                                  <span class="inline-title text-uppercase"
+                                    >Normatividad:</span
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    target="_blank"
+                                    href="https://www.unidadvictimas.gov.co/sites/default/files/documentosbiblioteca/ley-387-de-1997.pdf"
+                                  >
+                                    Ley 387 de 1997
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    target="_blank"
+                                    href="https://www.procuraduria.gov.co/relatoria/media/file/Decreto%20262%202014.pdf"
+                                  >
+                                    Decreto 262 de 2000
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    target="_blank"
+                                    href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1448_2011.html"
+                                  >
+                                    Ley 1448 de 2011
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    target="_blank"
+                                    href="http://www.secretariasenado.gov.co/senado/basedoc/decreto_4633_2011.html"
+                                  >
+                                    Decreto Ley 4633 de 2011
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    target="_blank"
+                                    href="http://www.secretariasenado.gov.co/senado/basedoc/decreto_4635_2011.html"
+                                  >
+                                    Decreto Ley 4635 de 2011
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    target="_blank"
+                                    href="http://www.suin-juriscol.gov.co/viewDocument.asp?ruta=Decretos/1127223"
+                                  >
+                                    Decreto 599 de 2012
+                                  </a>
+                                </li>
+                                <li>
+                                  <a target="_blank" href="google.com">
+                                    Resolución 020 de 2020
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div
+                            class="b-text-list"
+                            style="border:none;box-shadow: 0px 5px 15px -12px #6A6E70; padding-left: 30px;padding-right: 30px; padding-bottom: 1px;"
+                          >
+                            <ul class="list-unstyled">
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  01
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Realiza acompañamiento en los Comités
+                                    Operativos Locales de Restitución y
+                                    Formalización de Tierras Despojadas y
+                                    Abandonadas
+                                    Forzosamente-(microfocalización).
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  02
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Presenta a los Comités Operativos Locales de
+                                    Restitución y Formalización de Tierras
+                                    Despojadas y Abandonadas Forzosamente un
+                                    concepto con la información recaudada sobre
+                                    la zona objeto de microfocalización,
+                                    soportado en datos oficiales de las
+                                    entidades del gobierno, organismos de
+                                    control e información de organismos
+                                    internacionales.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  03
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Actúa preventivamente mediante conceptos y
+                                    recomendaciones a la Administrativa Especial de Gestión de
+                                    Restitución de Tierras Despojadas UAEGRTD, cuando las
+                                    condiciones para microfocalizar una zona
+                                    hayan cambiado y representen un riesgo para
+                                    los solicitantes y los funcionarios que
+                                    desempeñan actividades en el territorio
+                                    propias de la fase administrativa del
+                                    proceso de restitución. Estas
+                                    recomendaciones deberían buscar que las
+                                    entidades competentes garanticen la
+                                    seguridad.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  04
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Revisa las actas de los Comité Operativo Local de Restitución COLR y los informes
+                                    periódicos presentados por los Procuradores
+                                    Judiciales con el objeto de sistematizar las
+                                    recomendaciones formuladas en este espacio y
+                                    acordar lineamientos de intervención.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  05
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Hace seguimiento a las diligencias de
+                                    comunicación del inicio del estudio formal
+                                    de las solicitudes de restitución de
+                                    tierras.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  06
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Formula documentos de alertas y
+                                    recomendaciones de articulación
+                                    interinstitucional para la identificación
+                                    física de los predios solicitados en
+                                    restitución de tierras y formulación de mesa
+                                    de trabajo con la Administrativa Especial de Gestión de
+                                    Restitución de Tierras Despojadas UAEGRTD y el Instituto Geográfico Agustín Codazzi IGAC.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  07
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Solicita a las Direcciones Territoriales de
+                                    la Administrativa Especial de Gestión de
+                                    Restitución de Tierras Despojadas UAEGRTD, una relación de las resoluciones
+                                    que han decidido los desistimientos frente a
+                                    las solicitudes de restitución presentadas.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  08
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Atención y remisión a las autoridades
+                                    competentes de las quejas y reclamaciones de
+                                    víctimas de despojo y/o solicitantes de
+                                    protección predial (Registro Único de Predios y Territorios Abandonados RUPTA).
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  09
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Realiza intervención en la fase
+                                    administrativa adelantada por la Unidad de
+                                    Restitución de Tierras.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  10
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Interpone las acciones populares, de tutela,
+                                    de cumplimiento, de nulidad de los actos
+                                    administrativos y las demás que resulten
+                                    conducentes para asegurar la defensa del
+                                    orden jurídico en relación con las
+                                    reclamaciones de restitución de tierras.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  11
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Interviene en la fase administrativa para
+                                    garantizar la protección de segundos
+                                    ocupantes en condición de vulnerabilidad.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  12
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Interviene en la revisión de decisiones de
+                                    no inclusión en el Registro de Tierras
+                                    Despojadas de la Unidad de Restitución de
+                                    Tierras.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  13
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Interviene ante las Oficinas de Registro de
+                                    Instrumentos Públicos o Superintendencias de
+                                    Notariado en relación con predios rurales o
+                                    urbanos, abandonados o despojados con
+                                    ocasión del conflicto armado.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  14
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Hace seguimiento e intervención para el
+                                    cumplimiento de punto 1 del Acuerdo de Paz
+                                    en lo referente a la Reforma Rural Integral,
+                                    y en particular a los temas relacionados con
+                                    víctimas de despojo o abandono de tierras.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  15
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Hace seguimiento e intervención para el
+                                    cumplimiento de punto 1 del Acuerdo de Paz
+                                    en lo referente a la Reforma Rural Integral,
+                                    y en particular a los temas relacionados con
+                                    catastro multipropósito cuando medien
+                                    procesos de restitución de tierras.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  16
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Recepciona y tramita las denuncias
+                                    relacionadas con amenazas a líderes
+                                    reclamantes de restitución de tierras.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  17
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Acompaña los espacios de socialización de
+                                    los decretos leyes con las comunidades
+                                    étnicas.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  18
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Emite recomendaciones a partir de los
+                                    espacios de socialización de los decretos
+                                    leyes con las comunidades étnicas.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  19
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Solicita a la Unidad de Restitución de Tierras URT que informe a la PGN
+                                    cuando sea necesario coadyuvar el
+                                    requerimiento de información para adelantar
+                                    estudios preliminares, especialmente cuando
+                                    las entidades requeridas superen el término
+                                    concedido para el envío de información.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  20
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Exhorta a la Unidad de Restitución de Tierras URT para que antes de proferir
+                                    el acto administrativo que adopta los
+                                    estudios preliminares, verifique posibles
+                                    traslapes con solicitudes individuales de
+                                    restitución de tierras en el territorio
+                                    étnico en cuestión, así como presencia de
+                                    población no étnica.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  21
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Realiza control de legalidad del acto
+                                    administrativo por el cual se adopta el
+                                    estudio preliminar, en aras de identificar
+                                    posibles errores, advertir una ruta
+                                    inadecuada, o sugerir la adopción de nuevas
+                                    medidas de protección territorial.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  22
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Hace seguimiento de los acuerdos
+                                    metodológicos en la etapa de
+                                    caracterización, para la intervención de la
+                                    Unidad de Restitución de Tierras URT, tales como los principios que rigen los
+                                    Decretos-Leyes, los acuerdos de seguridad y
+                                    protección, el tipo de actividades de
+                                    recolección de pruebas sociales, entre
+                                    otros.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  23
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Acompaña espacios de resolución de
+                                    conflictos intra o interétnicos, para que
+                                    las comunidades, a través de sus
+                                    autoridades, los resuelvan.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  24
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Solicita a la Unidad de Restitución de Tierras URT que identifique los
+                                    ocupantes vulnerables (no étnicos) en el
+                                    territorio y articule acciones con la
+                                    Defensoría del Pueblo para garantizarles sus
+                                    derechos.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  25
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Acompaña, como Ministerio Público, las
+                                    jornadas de caracterización de ocupantes no
+                                    étnicos.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  26
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Acompaña a la asamblea de cierre de
+                                    caracterización, para que acompañe la
+                                    socialización del informe final de
+                                    caracterización y la validación de las
+                                    pretensiones de la demanda con la comunidad.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  27
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Analiza los motivos de la negativa de
+                                    inscripción cuando ocurra, (Art. 121 Decreto Ley 4635
+                                    y art. 157 Decreto Ley 4633) y en caso de que no se
+                                    encuentren suficientemente sustentados,
+                                    articularse con la Defensoría del Pueblo
+                                    para demandar dicho acto administrativo ante
+                                    el Tribunal Contencioso Administrativo con
+                                    jurisdicción en el territorio
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  28
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Recomienda la presentación de la demanda,
+                                    cuando se haya producido el ingreso del
+                                    territorio en el Registro de Tierras Despojadas y Abandonadas Forzosamente RTDAF y la Unidad de Restitución de Tierras URT no haya
+                                    presentado la demanda, transcurrido el
+                                    término de 60 días que otorga el art. 160
+                                    del Decreto Ley 4633 y de 30 días en el caso del art.
+                                    124 del Decreto Ley 4635.
+                                  </p>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-lg-offset-1"
+                  >
+                    <div class="b-aside wow slideInRight">
+                      <div class="b-search-add">
+                        <form id="search-additional-form" class="form-aside">
+                          <input
+                            type="text"
+                            placeholder="Buscar..."
+                            class="form-control"
+                          />
+                          <button class="aside-submit">
+                            <i class="icon fa fa-search"></i>
+                          </button>
+                        </form>
+                      </div>
+
+                      <div class="b-aside-item">
+                        <div class="aside-categories">
+                          <h5 class="aside-title">
+                            Etiquetas
+                            <i class="fa fa-align-left" aria-hidden="true"></i>
+                          </h5>
+                          <ul class="list-unstyled">
+                            <li>
+                              <a href="#"
+                                >Todo
+                                <span class="categories-counter">122</span></a
+                              >
+                            </li>
+                            <li>
+                              <a href="#"
+                                >Alcaldes
+                                <span class="categories-counter">31</span></a
+                              >
+                            </li>
+                            <li>
+                              <a href="#"
+                                >Universidades
+                                <span class="categories-counter">21</span></a
+                              >
+                            </li>
+                            <li>
+                              <a href="#"
+                                >Estudiantes
+                                <span class="categories-counter">13</span></a
+                              >
+                            </li>
+                            <li>
+                              <a href="#"
+                                >Gobernadores
+                                <span class="categories-counter">45</span></a
+                              >
+                            </li>
+                            <li>
+                              <a href="#"
+                                >Gremios
+                                <span class="categories-counter">9</span></a
+                              >
+                            </li>
+                            <li>
+                              <a href="#"
+                                >Asociaciones
+                                <span class="categories-counter">15</span></a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section id="sec2">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="b-blog-single-content wow slideInLeft">
+                      <div class="blog-item-content clearfix">
+                        <div class="b-text wow fadeInUp">
+                          <p
+                            style="font-size: 20px; font-weight: 600; color: #191C1F; text-align: center;"
+                          >
+                            Función de Intervención
+                          </p>
+                          <br />
+                          <div
+                            class="b-single-tags-share clearfix wow fadeInUp"
+                          >
+                            <div class="b-tags pull-left">
+                              <ul class="list-unstyled">
+                                <li>
+                                  <span class="inline-title text-uppercase"
+                                    >Normatividad:</span
+                                  >
+                                </li>
+                                <li>
+                                  <a
+                                    target="_blank"
+                                    href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1448_2011.html"
+                                  >
+                                    Ley 1448 de 2011
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    target="_blank"
+                                    href="http://www.secretariasenado.gov.co/senado/basedoc/decreto_4633_2011.html"
+                                  >
+                                    Decreto Ley 4633 de 2011
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    target="_blank"
+                                    href="http://www.secretariasenado.gov.co/senado/basedoc/decreto_4634_2011.html"
+                                  >
+                                    Decreto Ley 4634 de 2011
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    target="_blank"
+                                    href="http://www.secretariasenado.gov.co/senado/basedoc/decreto_4635_2011.html"
+                                  >
+                                    Decreto Ley 4635 de 2011
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    target="_blank"
+                                    href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1561_2012.html"
+                                  >
+                                    Ley 1561 de 2012
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    target="_blank"
+                                    href="http://www.suin-juriscol.gov.co/viewDocument.asp?ruta=Decretos/30019931"
+                                  >
+                                    Decreto 1071 de 2015
+                                  </a>
+                                </li>
+                                <li>
+                                  <a target="_blank" href="google.com">
+                                    Resolución 020 de 2020
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div
+                            class="b-text-list"
+                            style="border:none;box-shadow: 0px 5px 15px -12px #6A6E70; padding-left: 30px;padding-right: 30px; padding-bottom: 1px;"
+                          >
+                            <ul class="list-unstyled">
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  01
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Adelanta intervención judicial frente a las
+                                    notificaciones de admisiones de demandas y
+                                    sentencias proferidas por los juzgados
+                                    especializados en restitución de tierras y
+                                    las Salas de Restitución de los Tribunales
+                                    Superiores que conocen de procesos donde el
+                                    objeto del litigio sea restitución de
+                                    tierras.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  02
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Interpone las acciones populares, de tutela,
+                                    de cumplimiento, de nulidad de los actos
+                                    administrativos y las demás que resulten
+                                    conducentes para asegurar la defensa del
+                                    orden jurídico en relación con las
+                                    reclamaciones de restitución de tierras.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  03
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Interpone las acciones judiciales y las
+                                    demás que resulten conducentes para asegurar
+                                    la defensa del orden jurídico en relación
+                                    con las decisiones de no inicio y no
+                                    inscripción en el Registro de Tierras Despojadas y Abandonadas Forzosamente RTDAF.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  04
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Actúa como interviniente en la fase judicial
+                                    para garantizar la protección de segundos
+                                    ocupantes en condición de vulnerabilidad.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  05
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Actúa como interviniente en la fase judicial
+                                    para formular alerta de articulación
+                                    interinstitucional para la identificación
+                                    del predio: Cuando se presenten divergencias
+                                    significativas en la identificación física
+                                    del predio (dimensiones en escrituras, en el
+                                    folio de matrícula inmobiliaria y en la
+                                    georreferenciación realizada por la Unidad
+                                    Administrativa Especial de Gestión de
+                                    Restitución de Tierras Despojadas UAEGRTD),
+                                    los Procuradores Judiciales deberán
+                                    presentar un memorial ante la Sala
+                                    Especializada en Restitución de Tierras
+                                    solicitando que se ordene llevar a cabo una
+                                    mesa técnica entre la Unidad Administrativa
+                                    Especial de Gestión de Restitución de
+                                    Tierras Despojadas UAEGRTD y el Instituto
+                                    Geográfico Agustín Codazzi IGAC.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  06
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Solicita como medida cautelar, que junto a
+                                    la medida de protección del predio el juez
+                                    disponga que se suspenda la concesión de
+                                    licencias ambientales, de títulos mineros o
+                                    bloque de hidrocarburos hasta que se defina
+                                    la situación jurídica del predio solicitado
+                                    en restitución.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  07
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Cuando los Procuradores Judiciales
+                                    evidencien que ha transcurrido un tiempo
+                                    considerable entre la microfocalización y la
+                                    apertura del periodo probatorio, deberán
+                                    solicitar al juez que decrete las pruebas
+                                    necesarias para que se acredite dentro del
+                                    proceso si aún permanecen las condiciones de
+                                    seguridad de la zona microfocalizada. Si el
+                                    periodo probatorio ha finalizado y no se han
+                                    decretado pruebas para determinar si las
+                                    condiciones de seguridad de la zona
+                                    microfocalizada donde se encuentra el predio
+                                    han cambiado, los Procuradores Judiciales
+                                    deberán pedirlas a las entidades competentes
+                                    y con estas fundamentar el concepto que en
+                                    calidad de Ministerio Público se debe
+                                    presentar ante los Jueces y Magistrados de
+                                    Restitución de Tierras en el marco del
+                                    proceso de restitución de tierras. En este
+                                    concepto, se hará énfasis sobre las
+                                    circunstancias que pueden afectar el retorno
+                                    en condiciones de seguridad y dignidad de
+                                    las personas a quienes se les ha restituido
+                                    el predio, debido a la existencia de
+                                    variables que pueden afectar la seguridad de
+                                    la zona donde se encuentra ubicado el
+                                    predio.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  08
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Adelantar las actuaciones necesarias para
+                                    que las entidades requeridas por el juez de
+                                    restitución aporten la información
+                                    solicitada de manera oportuna a los
+                                    procesos.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  09
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Si el fallo del juez de restitución de
+                                    tierras ordena no restituir el predio al
+                                    reclamante y el Procurador Judicial en su
+                                    concepto solicitó que se reconociera el
+                                    derecho al solicitante, el Procurador
+                                    Judicial podrá elevar el recurso de Consulta
+                                    ante la Sala Especializada en Restitución de
+                                    Tierras que corresponda.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  10
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Solicita la adición, modificación o
+                                    corrección del fallo, en caso de que se
+                                    advierten situaciones jurídicas o fácticas
+                                    que afectan el proceso y el cumplimiento de
+                                    la sentencia.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  11
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Intervienen en materia pos fallo de
+                                    restitución de tierras y derechos
+                                    territoriales en relación con las entidades
+                                    que conforman el Sistema Nacional de
+                                    Atención y Reparación a Víctimas compuesto
+                                    por:
+                                  </p>
+                                  <br />
+                                  <!-- acordion  -->
+                                  <div
+                                    class="panel-group"
+                                    id="accordion"
+                                    role="tablist"
+                                    aria-multiselectable="true"
+                                  >
+                                    <div class="panel panel-default">
+                                      <div
+                                        class="panel-heading"
+                                        role="tab"
+                                        id="headingOne"
+                                      >
+                                        <h4 class="panel-title">
+                                          <a
+                                            role="button"
+                                            data-toggle="collapse"
+                                            data-parent="#accordion"
+                                            href="#collapseOne"
+                                            aria-expanded="true"
+                                            aria-controls="collapseOne"
+                                          >
+                                            A nivel Nacional
+                                          </a>
+                                        </h4>
+                                      </div>
+                                      <div
+                                        id="collapseOne"
+                                        class="panel-collapse collapse"
+                                        role="tabpanel"
+                                        aria-labelledby="headingOne"
+                                      >
+                                        <div class="panel-body">
+                                          <!-- entidades de la unidad de victimas -->
+                                          <ul class="list-unstyled">
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio del Interior y
+                                                  de Justicia
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Relaciones
+                                                  Exteriores
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Hacienda y
+                                                  Crédito Público
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Defensa
+                                                  Nacional
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Agricultura y
+                                                  Desarrollo Rural
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de la Protección
+                                                  Social
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Comercio,
+                                                  Industria y Turismo
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Educación
+                                                  Nacional
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Ambiente,
+                                                  Vivienda y Desarrollo
+                                                  Territorial
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Tecnologías
+                                                  de la Información y las
+                                                  Comunicaciones
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Cultura
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Departamento Nacional de
+                                                  Planeación
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Agencia Presidencial para
+                                                  la Acción Social y la
+                                                  Cooperación Internacional
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Unidad Administrativa
+                                                  Especial de Atención y
+                                                  Reparación Integral a las
+                                                  Víctimas
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Unidad Administrativa
+                                                  Especial de Gestión de
+                                                  Restitución de Tierras
+                                                  Despojadas
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Fiscalía General de la
+                                                  Nación
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Defensoría del Pueblo
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Registraduría Nacional del
+                                                  Estado Civil
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Consejo Superior de la
+                                                  Judicatura - Sala
+                                                  Administrativa (sic)
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Policía Nacional
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Servicio Nacional de
+                                                  Aprendizaje
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  EI Instituto Colombiano de
+                                                  Crédito y Estudios Técnicos en
+                                                  el Exterior
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Instituto Colombiano de
+                                                  Bienestar Familiar
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Instituto Colombiano de
+                                                  Desarrollo Rural
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Archivo General de la
+                                                  Nación
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Instituto Nacional de
+                                                  Medicina Legal y Ciencias
+                                                  Forenses
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Instituto Geográfico
+                                                  Agustín Codazzi
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Superintendencia de
+                                                  Notariado y Registro
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Banco de Comercio Exterior
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Fondo para el
+                                                  Financiamiento del Sector
+                                                  Agropecuario
+                                                </p>
+                                              </div>
+                                            </li>
+                                          </ul>
+                                          <!-- fin entidades de la unidad de victimas -->
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                      <div
+                                        class="panel-heading"
+                                        role="tab"
+                                        id="headingTwo"
+                                      >
+                                        <h4 class="panel-title">
+                                          <a
+                                            class="collapsed"
+                                            role="button"
+                                            data-toggle="collapse"
+                                            data-parent="#accordion"
+                                            href="#collapseTwo"
+                                            aria-expanded="false"
+                                            aria-controls="collapseTwo"
+                                          >
+                                            A nivel Territorial
+                                          </a>
+                                        </h4>
+                                      </div>
+                                      <div
+                                        id="collapseTwo"
+                                        class="panel-collapse collapse"
+                                        role="tabpanel"
+                                        aria-labelledby="headingTwo"
+                                      >
+                                        <div class="panel-body">
+                                          <ul class="list-unstyled">
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  Los Departamentos, Distritos y
+                                                  Municipios
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  Las entidades descentralizadas
+                                                  funcionalmente o por servicios
+                                                  con funciones y competencias
+                                                  para la atención y reparación
+                                                  a las víctimas.
+                                                </p>
+                                              </div>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- fin acordion -->
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  12
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Realiza actuaciones preventivas en materia
+                                    de seguimiento a entidades con órdenes pos
+                                    fallo en relación con las entidades que
+                                    conforman el Sistema Nacional de Atención y
+                                    Reparación a Víctimas compuesto por:
+                                  </p>
+                                  <br />
+                                  <!-- acordion  -->
+                                  <div
+                                    class="panel-group"
+                                    id="accordion"
+                                    role="tablist"
+                                    aria-multiselectable="true"
+                                  >
+                                    <div class="panel panel-default">
+                                      <div
+                                        class="panel-heading"
+                                        role="tab"
+                                        id="headingOne"
+                                      >
+                                        <h4 class="panel-title">
+                                          <a
+                                            role="button"
+                                            data-toggle="collapse"
+                                            data-parent="#accordion"
+                                            href="#collapse3"
+                                            aria-expanded="true"
+                                            aria-controls="collapse3"
+                                          >
+                                            A nivel Nacional
+                                          </a>
+                                        </h4>
+                                      </div>
+                                      <div
+                                        id="collapse3"
+                                        class="panel-collapse collapse"
+                                        role="tabpanel"
+                                        aria-labelledby="headingOne"
+                                      >
+                                        <div class="panel-body">
+                                          <!-- entidades de la unidad de victimas -->
+                                          <ul class="list-unstyled">
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio del Interior y
+                                                  de Justicia
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Relaciones
+                                                  Exteriores
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Hacienda y
+                                                  Crédito Público
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Defensa
+                                                  Nacional
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Agricultura y
+                                                  Desarrollo Rural
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de la Protección
+                                                  Social
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Comercio,
+                                                  Industria y Turismo
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Educación
+                                                  Nacional
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Ambiente,
+                                                  Vivienda y Desarrollo
+                                                  Territorial
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Tecnologías
+                                                  de la Información y las
+                                                  Comunicaciones
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Ministerio de Cultura
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Departamento Nacional de
+                                                  Planeación
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Agencia Presidencial para
+                                                  la Acción Social y la
+                                                  Cooperación Internacional
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Unidad Administrativa
+                                                  Especial de Atención y
+                                                  Reparación Integral a las
+                                                  Víctimas
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Unidad Administrativa
+                                                  Especial de Gestión de
+                                                  Restitución de Tierras
+                                                  Despojadas
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Fiscalía General de la
+                                                  Nación
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Defensoría del Pueblo
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Registraduría Nacional del
+                                                  Estado Civil
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Consejo Superior de la
+                                                  Judicatura - Sala
+                                                  Administrativa (sic)
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Policía Nacional
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Servicio Nacional de
+                                                  Aprendizaje
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  EI Instituto Colombiano de
+                                                  Crédito y Estudios Técnicos en
+                                                  el Exterior
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Instituto Colombiano de
+                                                  Bienestar Familiar
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Instituto Colombiano de
+                                                  Desarrollo Rural
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Archivo General de la
+                                                  Nación
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Instituto Nacional de
+                                                  Medicina Legal y Ciencias
+                                                  Forenses
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Instituto Geográfico
+                                                  Agustín Codazzi
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  La Superintendencia de
+                                                  Notariado y Registro
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Banco de Comercio Exterior
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  El Fondo para el
+                                                  Financiamiento del Sector
+                                                  Agropecuario
+                                                </p>
+                                              </div>
+                                            </li>
+                                          </ul>
+                                          <!-- fin entidades de la unidad de victimas -->
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                      <div
+                                        class="panel-heading"
+                                        role="tab"
+                                        id="headingTwo"
+                                      >
+                                        <h4 class="panel-title">
+                                          <a
+                                            class="collapsed"
+                                            role="button"
+                                            data-toggle="collapse"
+                                            data-parent="#accordion"
+                                            href="#collapse4"
+                                            aria-expanded="false"
+                                            aria-controls="collapse4"
+                                          >
+                                            A nivel Territorial
+                                          </a>
+                                        </h4>
+                                      </div>
+                                      <div
+                                        id="collapse4"
+                                        class="panel-collapse collapse"
+                                        role="tabpanel"
+                                        aria-labelledby="headingTwo"
+                                      >
+                                        <div class="panel-body">
+                                          <ul class="list-unstyled">
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  Los Departamentos, Distritos y
+                                                  Municipios
+                                                </p>
+                                              </div>
+                                            </li>
+                                            <li style="margin-bottom: 2px;">
+                                              <div
+                                                class="order"
+                                                style=" line-height: 1.9; margin-right: 30px;"
+                                              >
+                                                <i
+                                                  class="fa fa-check"
+                                                  aria-hidden="true"
+                                                ></i>
+                                              </div>
+                                              <div class="content">
+                                                <p>
+                                                  Las entidades descentralizadas
+                                                  funcionalmente o por servicios
+                                                  con funciones y competencias
+                                                  para la atención y reparación
+                                                  a las víctimas.
+                                                </p>
+                                              </div>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- fin acordion -->
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  13
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Construye diagnósticos cualitativos respecto
+                                    a los avances o retrocesos en la fase pos
+                                    fallo, que sirvan a los Jueces y Magistrados
+                                    como insumos para tomar decisiones efectivas
+                                    de cara al cumplimiento de sus fallos. Estos
+                                    diagnósticos se orientarán a medir la
+                                    percepción de los beneficiarios de
+                                    restitución de tierras frente al
+                                    cumplimiento de las órdenes de los fallos y
+                                    a los avances en el goce efectivo de
+                                    derechos. Lo anterior, desde un enfoque de
+                                    acción sin daño.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  14
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    Vela porque se respete el enfoque ético de
+                                    la acción sin daño, que no se genere
+                                    duplicidad en las acciones institucionales,
+                                    y que estas respeten el enfoque diferencial
+                                    étnico a la hora de llevar la oferta
+                                    institucional y concertarla con las
+                                    comunidades, para que sus acciones no
+                                    generen una posible revictimización.
+                                  </p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="order" style=" line-height: 1.9 ">
+                                  15
+                                </div>
+                                <div class="content">
+                                  <p>
+                                    En ejercicio de la competencia preventiva,
+                                    dará a conocer las comunidades étnicas el
+                                    principio de co-responsabilidad que permea
+                                    el cumplimiento y materialización de las
+                                    órdenes judiciales, buscando superar el
+                                    asistencialismo al que se han visto
+                                    sometidas las comunidades étnicas y que ha
+                                    generado graves daños a su cultura. La
+                                    corresponsabilidad tiene respaldo en los
+                                    artículos 330 y 246 de la Constitución y
+                                    reconoce tanto los derechos como
+                                    obligaciones en el ejercicio del gobierno
+                                    propio y la jurisdicción propia.
+                                  </p>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <section id="sec3">
+              <div class="row">
+                <div class="b-latest">
+                  <div class="b-title-head">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                          <div class="pull-left">
+                            <h3 class="big-title-mod">
+                              Otras Dependencias
+                            </h3>
+                          </div>
+                          <div class="pull-right">
+                            <a href="index.html" class="btn btn-primary"
+                              >INICIO</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slick carousel -->
+                  <div class="b-slick-holder wow fadeInUp">
+                    <div class="b-latest-carousel clearfix">
+                      <div class="latest-carousel-item">
+                        <div class="blog-item-content clearfix">
+                          <a
+                            href="blog-single.html"
+                            title="Dirección Nacional de Investigaciones Especiales"
+                            class="blog-item-img"
+                          >
+                            <img
+                              src="assets/media/components/b-blog/imgCard1.jpg"
+                              alt="Dirección Nacional de Investigaciones Especiales"
+                              class="img-responsive"
+                            />
+                            <span class="blog-category">Preventiva</span>
+                          </a>
+                          <div class="blog-item-caption">
+                            <h4 class="item-name">
+                              <a
+                                href="prev_Del1.html"
+                                target="_blank"
+                                title="Dirección Nacional de Investigaciones Especiales"
+                                >Dirección Nacional de Investigaciones
+                                Especiales</a
+                              >
+                            </h4>
+                            <p class="item-description">
+                              <b>Competencias</b> <br />
+                              Decreto 262 de 2000, Resolución 166 de 2003, Ley
+                              734 de 2002.
+                            </p>
+                            <a
+                              href="prev_Del1.html"
+                              target="_blank"
+                              title="Leer más"
+                              class="item-read-more"
+                              >...</a
+                            >
+                          </div>
+                        </div>
+                        <div class="blog-item-content clearfix">
+                          <a
+                            href="blog-single.html"
+                            title="Procuraduría 2 Delegada ante el Consejo de Estado"
+                            class="blog-item-img"
+                          >
+                            <img
+                              src="assets/media/components/b-blog/imgCard1.jpg"
+                              alt="Procuraduría 2 Delegada ante el Consejo de Estado"
+                              class="img-responsive"
+                            />
+                            <span class="blog-category">Intervención</span>
+                          </a>
+                          <div class="blog-item-caption">
+                            <h4 class="item-name">
+                              <a
+                                href="inter_Del2.html"
+                                target="_blank"
+                                title="Procuraduría 2 Delegada ante el Consejo de Estado"
+                                >Procuraduría 2 Delegada ante el Consejo de
+                                Estado</a
+                              >
+                            </h4>
+                            <p class="item-description">
+                              <b>Competencias</b> <br />
+                              Decreto 262 de 2000, Resolución 017 de 2000,
+                              Resolución 371 de 2005, Resolución 194 de 2011,
+                               <br />Ley 1437 de 2011
+                            </p>
+                            <a
+                              href="inter_Del2.html"
+                              target="_blank"
+                              title="Leer más"
+                              class="item-read-more"
+                              >...</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="latest-carousel-item">
+                        <div class="blog-item-content clearfix">
+                          <a
+                            href="blog-single.html"
+                            title="Procuraduría Delegada ante el Consejo de Estado"
+                            class="blog-item-img"
+                          >
+                            <img
+                              src="assets/media/components/b-blog/imgCard1.jpg"
+                              alt="Procuraduría Delegada para la Fuerza Pública y la Policía Judicial"
+                              class="img-responsive"
+                            />
+                            <span class="blog-category">Disciplinaria</span>
+                          </a>
+                          <div class="blog-item-caption">
+                            <h4 class="item-name">
+                              <a
+                                href="disc_Del1.html"
+                                target="_blank"
+                                title="Procuraduría Delegada ante el Consejo de Estado"
+                                >Procuraduría Delegada para la Fuerza Pública y
+                                la Policía Judicial</a
+                              >
+                            </h4>
+                            <p class="item-description">
+                              <b>Competencias</b> <br />
+                              Decreto 262 de 2000, Ley 734 de 2002, Resolución
+                              017 de 2000, Resolución 138 de 2018.
+                            </p>
+                            <a
+                              href="disc_Del1.html"
+                              target="_blank"
+                              title="Leer más"
+                              class="item-read-more"
+                              >...</a
+                            >
+                          </div>
+                        </div>
+                        <div class="blog-item-content clearfix">
+                          <a
+                            href="blog-single.html"
+                            title="Procuraduría 1 Delegada ante el Consejo de Estado"
+                            class="blog-item-img"
+                          >
+                            <img
+                              src="assets/media/components/b-blog/imgCard1.jpg"
+                              alt="Procuraduría 1 Delegada ante el Consejo de Estado"
+                              class="img-responsive"
+                            />
+                            <span class="blog-category">Intervención</span>
+                          </a>
+                          <div class="blog-item-caption">
+                            <h4 class="item-name">
+                              <a
+                                href="inter_Del1.html"
+                                target="_blank"
+                                title="Procuraduría 1 Delegada ante el Consejo de Estado"
+                                >Procuraduría 1 Delegada ante el Consejo de
+                                Estado</a
+                              >
+                            </h4>
+                            <p class="item-description">
+                              <b>Competencias</b> <br />
+                              Decreto 262 de 2000, Resolución 017 de 2000,
+                              Resolución 371 de 2005, Resolución 194 de 2011,
+                               <br />Ley 1437 de 2011
+                            </p>
+                            <a
+                              href="inter_Del1.html"
+                              target="_blank"
+                              title="Leer más"
+                              class="item-read-more"
+                              >...</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="latest-carousel-item">
+                        <div class="blog-item-content clearfix">
+                          <a
+                            href="blog-single.html"
+                            title="Procuraduría 3 Delegada ante el Consejo de Estado"
+                            class="blog-item-img"
+                          >
+                            <img
+                              src="assets/media/components/b-blog/imgCard1.jpg"
+                              alt="Procuraduría 3 Delegada ante el Consejo de Estado"
+                              class="img-responsive"
+                            />
+                            <span class="blog-category">Intervención</span>
+                          </a>
+                          <div class="blog-item-caption">
+                            <h4 class="item-name">
+                              <a
+                                href="inter_Del3.html"
+                                target="_blank"
+                                title="Procuraduría 3 Delegada ante el Consejo de Estado"
+                                >Procuraduría 3 Delegada ante el Consejo de
+                                Estado</a
+                              >
+                            </h4>
+                            <p class="item-description">
+                              <b>Competencias</b> <br />
+                              Decreto 262 de 2000, Resolución 017 de 2000,
+                              Resolución 371 de 2005, Resolución 194 de 2011,
+                               <br />Ley 1437 de 2011
+                            </p>
+                            <a
+                              href="inter_Del3.html"
+                              target="_blank"
+                              title="Leer más"
+                              class="item-read-more"
+                              >...</a
+                            >
+                          </div>
+                        </div>
+                        <div class="blog-item-content clearfix">
+                          <a
+                            href="blog-single.html"
+                            title="Procuraduría 4 Delegada ante el Consejo de Estado"
+                            class="blog-item-img"
+                          >
+                            <img
+                              src="assets/media/components/b-blog/imgCard1.jpg"
+                              alt="Procuraduría 4 Delegada ante el Consejo de Estado"
+                              class="img-responsive"
+                            />
+                            <span class="blog-category">Intervención</span>
+                          </a>
+                          <div class="blog-item-caption">
+                            <h4 class="item-name">
+                              <a
+                                href="inter_Del4.html"
+                                target="_blank"
+                                title="Procuraduría 4 Delegada ante el Consejo de Estado"
+                                >Procuraduría 4 Delegada ante el Consejo de
+                                Estado</a
+                              >
+                            </h4>
+                            <p class="item-description">
+                              <b>Competencias</b> <br />
+                              Decreto 262 de 2000, Resolución 017 de 2000,
+                              Resolución 371 de 2005, Resolución 194 de 2011,
+                               <br />Ley 1437 de 2011
+                            </p>
+                            <a
+                              href="inter_Del4.html"
+                              target="_blank"
+                              title="Leer más"
+                              class="item-read-more"
+                              >...</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="b-slick-arrows">
+                      <div class="custom-slideshow-controls">
+                        <span
+                          id="slick-slideshow-prev"
+                          class="slick-arrows-prev"
+                          ><i class="fa fa-angle-left" aria-hidden="true"></i
+                        ></span>
+                        <span
+                          id="slick-slideshow-next"
+                          class="slick-arrows-next"
+                          ><i class="fa fa-angle-right" aria-hidden="true"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END Slick carousel -->
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="b-footer-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <a href="https://www.procuraduria.gov.co/portal/" target="_blank">
+                <img
+                  class="img-responsive"
+                  alt="logo Procuraduría General de la Nación"
+                  title="logo Procuraduría General de la Nación"
+                  src="/assets/media/general/logo_pgn_2019-1.png"
+                  style="width: 90px;"
+                />
+              </a>
+              <!-- <div class="b-socials">
+								<ul class="list-inline">
+									<li>
+										
+											<i class="fa fa-facebook fa-fw" aria-hidden="true"></i>
+										
+									</li>
+									<li>
+										
+											<i class="fa fa-twitter fa-fw" aria-hidden="true"></i>
+										
+									</li>
+									
+								</ul>
+							</div> -->
+
+              <p class="copy">
+                MANUAL DE COMPETENCIAS
+              </p>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="b-footer-box">
+                <h5 class="footer-box-title">
+                  Centro de Atención al Público, CAP
+                </h5>
+                <ul class="list-unstyled">
+                  <li>
+                    Carrera 5 # 15-80, Bogotá D.C., Colombia
+                  </li>
+                  <li>
+                    Código postal: 110321
+                  </li>
+                  <li>
+                    Horario de atención: 8 a.m. a 5 p.m.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <div class="b-footer-box">
+                <h5 class="footer-box-title">
+                  DEPENDENCIAS
+                </h5>
+                <p>
+                  <a href="funcionInterventiva.html">Función Preventiva</a>
+                </p>
+                <p>
+                  <a href="funciondisciplinaria.html">Función Disciplinaria</a>
+                </p>
+                <p>
+                  <a href="funciondeintervencion">Función de Intervención</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- MAIN SCRIPTS-->
+    <script src="assets/libs/jquery-1.12.4.min.js"></script>
+    <script src="assets/libs/jquery-migrate-1.2.1.js"></script>
+    <!-- Bootstrap-->
+    <script src="assets/libs/bootstrap/bootstrap.min.js"></script>
+    <!-- Adaptive big text -->
+    <script src="assets/plugins/slabText/js/jquery.slabtext.min.js"></script>
+    <!-- Sliders -->
+    <!-- Owl slider -->
+    <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <!-- Slick slider -->
+    <script src="assets/plugins/slick/slick.min.js"></script>
+    <!-- Sly slider -->
+    <script src="assets/plugins/slyslider/sly.min.js"></script>
+    <!-- Bx slider -->
+    <script src="assets/plugins/bxslider/vendor/jquery.easing.1.3.js"></script>
+    <script src="assets/plugins/bxslider/vendor/jquery.fitvids.js"></script>
+    <script src="assets/plugins/bxslider/jquery.bxslider.min.js"></script>
+    <!-- Pop-up window-->
+    <script src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Headers scripts-->
+    <script src="assets/plugins/headers/slidebar.js"></script>
+    <script src="assets/plugins/headers/header.js"></script>
+    <!-- Filter and sorting images-->
+    <script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/plugins/isotope/imagesLoaded.js"></script>
+    <!-- Progress numbers-->
+    <script src="assets/plugins/rendro-easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="assets/plugins/rendro-easy-pie-chart/waypoints.min.js"></script>
+    <!-- Entry Animations -->
+    <script src="assets/plugins/wow.min.js"></script>
+    <!-- Calendar plugin -->
+    <script src="assets/plugins/pickmeup/pickmeup.js"></script>
+    <!-- User customization-->
+    <script src="assets/js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.5.4/jquery.smooth-scroll.min.js"></script>
+  </body>
+</html>
