@@ -2293,6 +2293,10 @@ th {
 .table > colgroup + thead > tr:first-child > td,
 .table > thead:first-child > tr:first-child > td {
   border-top: 0;
+  font-size: 13px;
+  background-color:#FEF9E7;
+  text-align: center;
+  color: #23272c; font-weight: 600;
 }
 .table > tbody + tbody {
   border-top: 2px solid #dddddd;
@@ -2318,6 +2322,8 @@ th {
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
   border: 1px solid #dddddd;
+  font-size: 12px;
+  text-align: center;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
@@ -2446,7 +2452,7 @@ table th[class*="col-"] {
   background-color: #ebcccc;
 }
 .table-responsive {
-  overflow-x: auto;
+  /* overflow-x: auto; */
   min-height: 0.01%;
 }
 @media screen and (max-width: 767px) {
@@ -6785,3 +6791,31 @@ button.close {
   transform: rotate(180deg);
 }  
 /* fin acordion */
+
+/* thead, tbody, tr, td, th { display: block; }
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 30px;
+
+   
+}
+
+tbody {
+    height: 120px;
+    overflow-y: auto;
+}
+
+
+
+
+tbody td, thead th {
+    width: 19.2%;
+    float: left;
+} */
