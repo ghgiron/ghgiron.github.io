@@ -2281,10 +2281,12 @@ th {
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #dddddd;
+  
 }
 .table > thead > tr > th {
   vertical-align: bottom;
   border-bottom: 2px solid #dddddd;
+  /* display: block; */
 }
 .table > caption + thead > tr:first-child > th,
 .table > colgroup + thead > tr:first-child > th,
@@ -2293,10 +2295,11 @@ th {
 .table > colgroup + thead > tr:first-child > td,
 .table > thead:first-child > tr:first-child > td {
   border-top: 0;
-  font-size: 13px;
+  font-size: 15px;
   background-color:#FEF9E7;
   text-align: center;
   color: #23272c; font-weight: 600;
+  vertical-align: middle;
 }
 .table > tbody + tbody {
   border-top: 2px solid #dddddd;
@@ -2322,7 +2325,7 @@ th {
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
   border: 1px solid #dddddd;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
 }
 .table-bordered > thead > tr > th,
@@ -2500,6 +2503,13 @@ table th[class*="col-"] {
     border-bottom: 0;
   }
 }
+
+/* css Gio table */
+
+/* fin css gio */
+
+
+
 fieldset {
   padding: 0;
   margin: 0;
@@ -6792,30 +6802,3 @@ button.close {
 }  
 /* fin acordion */
 
-/* thead, tbody, tr, td, th { display: block; }
-
-tr:after {
-    content: ' ';
-    display: block;
-    visibility: hidden;
-    clear: both;
-}
-
-thead th {
-    height: 30px;
-
-   
-}
-
-tbody {
-    height: 120px;
-    overflow-y: auto;
-}
-
-
-
-
-tbody td, thead th {
-    width: 19.2%;
-    float: left;
-} */
