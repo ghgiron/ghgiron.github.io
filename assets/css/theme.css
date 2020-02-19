@@ -4860,3 +4860,11 @@ font-size: 20px; font-weight: 600; color: #191C1F;
     line-height: 1.1;
     margin-right: 50px;
 }
+
+
+.image-zoom-available{
+  cursor: zoom-in;
+}
+.image-zoom-available.is-active{
+  cursor: none;
+}
