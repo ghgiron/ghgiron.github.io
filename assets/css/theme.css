@@ -3109,6 +3109,8 @@ footer .b-socials {
   margin-bottom: 0;
 }
 
+
+
 .b-links ul {
   padding: 25px 25px 25px;
   border: 1px solid #e8ecef;
@@ -3118,6 +3120,7 @@ footer .b-socials {
   background: #DDEBF6;
   transition: .9s;
 }
+
 .b-links ul:before {
   content: '';
   display: block;
@@ -4868,3 +4871,6 @@ font-size: 20px; font-weight: 600; color: #191C1F;
 .image-zoom-available.is-active{
   cursor: none;
 }
+
+
+
