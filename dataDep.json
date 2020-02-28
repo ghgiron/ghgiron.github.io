@@ -1,0 +1,130 @@
+{
+    "table": {
+        "dependencias": [
+            {
+                "dependencia":"Dirección Nacional de Investigaciones Especiales",
+                "image": "assets/media/components/b-blog/2.jpg",
+                "funcion":"Preventiva",
+                "url":"prev_Del1.html",
+                "tags":["Presta apoyo a las diferentes dependencias de la PGN en la práctica de pruebas o en el análisis de las mismas, en el desarrollo de procesos disciplinarios.",
+                "Ejerce funciones de policía judicial y participa, previa designación del Procurador General, en comisiones para adelantar investigaciones de manera conjunta con la Fiscalía General de la Nación, funcionarios judiciales, Contraloría General de la República y demás funcionarios que cumplan funciones de policía judicial.",
+                "Presta apoyo y colaboración técnico científica para la práctica y aseguramiento de pruebas a las oficinas de control interno disciplinario de las entidades dentro de los procesos disciplinarios que estas adelanten."
+                ,"Adelanta las respectivas indagaciones preliminares e investigaciones disciplinarias que sean asignadas por el Procurador General de la Nación."
+                ,"Decreto 262 de 2000 Resolución 166 de 2003 Ley 734 de 2002"
+                ]},
+              {
+                "dependencia":"Procuraduría Primera Delegada ante el Consejo de Estado",
+                "image": "assets/media/components/b-blog/19.jpg",
+                "funcion":"Intervención",
+                "url":"inter_Del1.html",
+                "tags":["Interviene de manera exclusiva en los procesos de pérdida de investidura de Congresistas en primera instancia, que se surten ante las Salas Especiales de Decisión."
+                  ,"Ejerce la coordinación de las Procuradurías Delegadas que actúan ante las diferentes secciones y subsecciones de la sala de lo contencioso administrativo y la sala plena del Consejo de Estado, en cuanto a la gestión y seguimiento de los asuntos materia de intervención en dicha corporación."
+                  ,"Intervienen en la segunda instancia de las sentencias que resuelvan las solicitudes de pérdida de investidura de congresistas, cuyo reparto hace la Secretaría General del Consejo de Estado, en la misma fecha en que se asigne consejero ponente. A dicha diligencia de reparto asistirá el titular de la Procuraduría Primera Delegada ante el Consejo de Estado, en su condición de coordinador de las Procuradurías Delegadas que actúan ante las diferentes Secciones y Subsecciones de la Sala de lo Contencioso Administrativo y la Sala Plena del Consejo de Estado."
+                  ,"Atienden y resuelven derechos de petición sobre los asuntos referentes a las secciones y subsecciones ante las cuales interviene."
+                  ,"De conformidad con el Decreto 262, Artículo 30, ejercen las siguientes funciones de intervención judicial en procesos contencioso administrativos:"
+                  ,"Como Ministerio Público ante el Consejo de Estado, cuando sea necesario para defender el orden jurídico, los derechos y garantías fundamentales o el patrimonio público."
+                  ,"En los procesos de pérdida de investidura de los Congresistas, en primera instancia."
+                  ,"Solicitar a las secciones del Consejo de Estado la remisión de asuntos sometidos a su conocimiento, para que sean decididos por la Sala Plena de lo Contencioso Administrativo, cuando a ello hubiere lugar, por su importancia jurídica o trascendencia social."
+                  ,"Decreto 262 de 2000 Resolución 017 de 2000 Resolución 371 de 2005 Resolución 194 de 2011 Ley 1437 de 2011"                 
+                ]
+              },
+              {
+                "dependencia":"Procuraduría Segunda Delegada ante el Consejo de Estado",
+                "image": "assets/media/components/b-blog/4.jpg",
+                "funcion":"Intervención",
+                "url":"inter_Del2.html",
+                "tags":["Ejerce las funciones de intervención ante la Sección II, ante las Salas Especiales y la Sala Plena del Consejo de Estado."
+                  ,"Interviene en los procesos de competencia de la Sección II del Consejo de Estado, y en aquellos asuntos que le sean asignados por la Coordinación a cargo de la Procuraduría Primera Delegada ante el Consejo de Estado (encargada de hacer los repartos), cuya intervención resulte obligatoria; así mismo, interviene en los procesos y asuntos asignados por agencia especial por el Procurador General de la Nación. Igualmente, se interviene en las acciones constitucionales asignadas por el reparto efectuado por el Consejo de Estado (por ejemplo, acciones populares)."
+                  ,"Interviene en la segunda instancia de las sentencias que resuelvan las solicitudes de pérdida de investidura de congresistas, cuyo reparto hace la Secretaría General del Consejo de Estado, en la misma fecha en que se asigne consejero ponente."
+                  ,"Realiza las audiencias y resuelve las peticiones de conciliación prejudicial en asuntos de conocimiento en única instancia del Consejo de Estado Sección II."
+                  ,"Atiende y resuelve derechos de petición sobre los asuntos referentes a las secciones y subsecciones ante las cuales interviene."
+                  ,"Decreto 262 de 2000 Resolución 017 de 2000 Resolución 371 de 2005 Resolución 194 de 2011 Ley 1437 de 2011"
+                ]
+              },
+              {
+                "dependencia": "Procuraduría Tercera Delegada ante el Consejo de Estado",
+                "image": "assets/media/components/b-blog/5.jpg",
+                "funcion": "Intervención",
+                "url": "inter_Del3.html",
+                "tags":["Ejerce las funciones de intervención ante la Sección II, ante las Salas Especiales y la Sala Plena del Consejo de Estado."
+                  ,"Interviene en los procesos de competencia de la Sección II del Consejo de Estado, y en aquellos asuntos que le sean asignados por la Coordinación a cargo de la Procuraduría Primera Delegada ante el Consejo de Estado (encargada de hacer los repartos), cuya intervención resulte obligatoria; así mismo, interviene en los procesos y asuntos asignados por agencia especial por el Procurador General de la Nación. Igualmente, se interviene en las acciones constitucionales asignadas por el reparto efectuado por el Consejo de Estado (por ejemplo, acciones populares)."
+                  ,"Intervienen en la segunda instancia de las sentencias que resuelvan las solicitudes de pérdida de investidura de congresistas, cuyo reparto hace la Secretaría General del Consejo de Estado, en la misma fecha en que se asigne consejero ponente. A dicha diligencia de reparto asistirá el titular de la Procuraduría Primera Delegada ante el Consejo de Estado, en su condición de coordinador de las Procuradurías Delegadas que actúan ante las diferentes Secciones y Subsecciones de la Sala de lo Contencioso Administrativo y la Sala Plena del Consejo de Estado."
+                  ,"Realiza las audiencias y resuelve las peticiones de conciliación prejudicial en asuntos de conocimiento en única instancia del Consejo de Estado"
+                  ,"Atienden y resuelven derechos de petición sobre los asuntos referentes a las secciones y subsecciones ante las cuales interviene."
+                  ,"De conformidad con el Decreto 262, Artículo 30, ejercen las siguientes funciones de intervención judicial en procesos contencioso administrativos"
+                  ,"Como Ministerio Público ante el Consejo de Estado, cuando sea necesario para defender el orden jurídico, los derechos y garantías fundamentales o el patrimonio público."
+                  ,"En las audiencias de conciliación que se tramiten ante el Consejo de Estado."
+                  ,"Realizar las audiencias de conciliación prejudicial en asuntos de conocimiento en única instancia del Consejo de Estado."
+                  ,"Interponer acciones de nulidad y nulidad absoluta de actos administrativos cuando a ello hubiere lugar."
+                  ,"Decreto 262 de 2000 Resolución 017 de 2000 Resolución 371 de 2005 Resolución 194 de 2011 Ley 1437 de 2011"
+                ]
+              },
+              {
+                "dependencia": "Procuraduría Cuarta Delegada ante el Consejo de Estado",
+                "image": "assets/media/components/b-blog/6.jpg",
+                "funcion": "Intervención",
+                "url": "inter_Del4.html",
+                "tags":["Decreto 262 de 2000 Resolución 017 de 2000 Resolución 371 de 2005 Resolución 194 de 2011 Ley 1437 de 2011"
+                  ,"Ejerce funciones ante la sección tercera, sub sección A del Consejo de Estado, al igual que en aquellos asuntos que le sean asignados por la Coordinación a cargo de la Procuraduría Primera Delegada ante el Consejo de Estado (encargada de hacer los repartos), cuya intervención resulte obligatoria; así mismo, interviene en los procesos y asuntos asignados por agencia especial por el Procurador General de la Nación. Igualmente, se interviene en las acciones constitucionales asignadas por el reparto efectuado por el Consejo de Estado (por ejemplo, acciones populares)."
+                  ,"Intervienen en la segunda instancia de las sentencias que resuelvan las solicitudes de pérdida de investidura de congresistas, cuyo reparto hace la Secretaría General del Consejo de Estado, en la misma fecha en que se asigne consejero ponente. A dicha diligencia de reparto asistirá el titular de la Procuraduría Primera Delegada ante el Consejo de Estado, en su condición de coordinador de las Procuradurías Delegadas que actúan ante las diferentes Secciones y Subsecciones de la Sala de lo Contencioso Administrativo y la Sala Plena del Consejo de Estado."
+                  ,"Atienden y resuelven derechos de petición sobre los asuntos referentes a las secciones y subsecciones ante las cuales interviene."
+                  ,"De conformidad con el Decreto 262, Artículo 30, ejercen las siguientes funciones de intervención judicial en procesos contencioso administrativos"
+                  ,"Como Ministerio Público ante el Consejo de Estado, cuando sea necesario para defender el orden jurídico, los derechos y garantías fundamentales o el patrimonio público."
+                  ,"En las audiencias de conciliación que se tramiten ante el Consejo de Estado."
+                  ,"Realizar las audiencias de conciliación prejudicial en asuntos de conocimiento en única instancia del Consejo de Estado."
+                  ,"Solicitar a las secciones del Consejo de Estado la remisión de asuntos sometidos a su conocimiento, para que sean decididos por la Sala Plena de lo Contencioso Administrativo, cuando a ello hubiere lugar, por su importancia jurídica o trascendencia social."
+                  ,"Interponer acciones de nulidad de actos administrativos y nulidad absoluta de los contratos estatales, cuando a ello hubiere lugar."
+                  ,"Ejercer las acciones necesarias para que se haga efectiva la responsabilidad patrimonial de los servidores o ex servidores públicos y los particulares por cuya conducta haya sido declarada responsable una entidad estatal, mediante sentencia proferida por el Consejo de Estado, conforme a la Constitución y la ley."
+                  ,"Ejercer las acciones necesarias para que se haga efectiva la responsabilidad patrimonial de los servidores o ex servidores públicos y los particulares, cuando se hubieren conciliado ante el Consejo de Estado pretensiones de la misma naturaleza y de ello se deriven obligaciones patrimoniales a cargo de las entidades estatales."
+                ]
+              },
+              {
+                "dependencia": "Procuraduría Quinta Delegada ante el Consejo de Estado",
+                "image": "assets/media/components/b-blog/7.jpg",
+                "funcion": "Intervención",
+                "url": "inter_Del5.html",
+                "tags":["Decreto 262 de 2000 Resolución 017 de 2000 Resolución 371 de 2005 Resolución 194 de 2011 Ley 1437 de 2011"
+                  ,"Ejerce funciones ante la sección tercera, sub sección B del Consejo de Estado, al igual que en aquellos asuntos que le sean asignados por la Coordinación a cargo de la Procuraduría Primera Delegada ante el Consejo de Estado (encargada de hacer los repartos), cuya intervención resulte obligatoria; así mismo, interviene en los procesos y asuntos asignados por agencia especial por el Procurador General de la Nación. Igualmente, se interviene en las acciones constitucionales asignadas por el reparto efectuado por el Consejo de Estado (por ejemplo, acciones populares)."
+                  ,"Intervienen en la segunda instancia de las sentencias que resuelvan las solicitudes de pérdida de investidura de congresistas, cuyo reparto hace la Secretaría General del Consejo de Estado, en la misma fecha en que se asigne consejero ponente. A dicha diligencia de reparto asistirá el titular de la Procuraduría Primera Delegada ante el Consejo de Estado, en su condición de coordinador de las Procuradurías Delegadas que actúan ante las diferentes Secciones y Subsecciones de la Sala de lo Contencioso Administrativo y la Sala Plena del Consejo de Estado."
+                  ,"Atienden y resuelven derechos de petición sobre los asuntos referentes a las secciones y subsecciones ante las cuales interviene."
+                  ,"De conformidad con el Decreto 262, Artículo 30, ejercen las siguientes funciones de intervención judicial en procesos contencioso administrativos"
+                  ,"Como Ministerio Público ante el Consejo de Estado, cuando sea necesario para defender el orden jurídico, los derechos y garantías fundamentales o el patrimonio público."
+                  ,"En las audiencias de conciliación que se tramiten ante el Consejo de Estado."
+                  ,"Realizar las audiencias de conciliación prejudicial en asuntos de conocimiento en única instancia del Consejo de Estado."
+                  ,"Solicitar a las secciones del Consejo de Estado la remisión de asuntos sometidos a su conocimiento, para que sean decididos por la Sala Plena de lo Contencioso Administrativo, cuando a ello hubiere lugar, por su importancia jurídica o trascendencia social."
+                  ,"Interponer acciones de nulidad de actos administrativos y nulidad absoluta de los contratos estatales, cuando a ello hubiere lugar."
+                  ,"Ejercer las acciones necesarias para que se haga efectiva la responsabilidad patrimonial de los servidores o ex servidores públicos y los particulares por cuya conducta haya sido declarada responsable una entidad estatal, mediante sentencia proferida por el Consejo de Estado, conforme a la Constitución y la ley."
+                  ,"Ejercer las acciones necesarias para que se haga efectiva la responsabilidad patrimonial de los servidores o ex servidores públicos y los particulares, cuando se hubieren conciliado ante el Consejo de Estado pretensiones de la misma naturaleza y de ello se deriven obligaciones patrimoniales a cargo de las entidades estatales."
+                ]
+              },
+              {
+                "dependencia": "",
+                "image": "",
+                "funcion": "",
+                "url": "",
+                "tags":[""
+                  ,""
+                  ,""
+                  ,""
+                  ,""
+                  ,""
+                ]
+              },
+              {
+                "dependencia": "",
+                "image": "",
+                "funcion": "",
+                "url": "",
+                "tags":[""
+                  ,""
+                  ,""
+                  ,""
+                  ,""
+                  ,""
+                ]
+              }
+
+        ]
+
+    }
+}

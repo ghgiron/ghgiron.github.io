@@ -2303,7 +2303,16 @@ th {
 }
 .table > tbody + tbody {
   border-top: 2px solid #dddddd;
+  
 }
+.table tbody {
+  height: 100px;
+  /* overflow-y: auto; */
+  width: 100%;
+  border-top: 6px solid #761c19;
+}
+
+
 .table .table {
   background-color: #ffffff;
 }
@@ -2504,9 +2513,34 @@ table th[class*="col-"] {
   }
 }
 
-/* css Gio table */
+/* css custum Gio */
+/* .table thead,
+.table tfoot{
+  width: 100%;
+}
 
-/* fin css gio */
+.table tbody {
+  height: 700px;
+  overflow-y: auto;
+  width: 100%;
+  border-top: 6px solid #761c19;
+}
+.table thead,
+.table tbody,
+.table tfoot,
+.table tr,
+.table td,
+.table th {
+  display: block;
+}
+.table tbody td,
+.table thead > tr> th,
+.table tfoot > tr> td{
+  float: left;
+  border-bottom-width: 0;
+} */
+
+/*fin css gio*/
 
 
 

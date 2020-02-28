@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Webslesson Tutorial | Search HTML Table Data by using JQuery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  #result {
+   position: absolute;
+   width: 100%;
+   max-width:870px;
+   cursor: pointer;
+   overflow-y: auto;
+   max-height: 400px;
+   box-sizing: border-box;
+   /* z-index: 1001; */
+   text-align: left;
+
+  }
+  .link-class:hover{
+   background-color:#f1f1f1;
+  }
+  </style>
+ </head>
+ <body>
+  <br /><br />
+  <div class="container" style="width:900px;">
+   <h2 align="center" >JSON Live Data Search using Ajax JQuery</h2>
+   <h3 align="center">Employee Data</h3>   
+   <br /><br />
+   <div align="center">
+    <input type="text" name="search" id="search" placeholder="Search Employee Details" class="form-control" />
+   </div>
+   
+  
+   <div style="width: 500px; height: 500px; background: #f2f1f1; z-index: 2000; position: relative;"> <ul class="list-group" id="result"></ul></div>
+   <div style="width: 500px; height: 500px; background-color: brown; z-index: 2300;"> </div>
+   <br />
+  <a href="normatividad.html" target="_blank">hola</a>
+  </div>
+ </body>
+</html>
+
+<script>
+$(document).ready(function(){
+ $.ajaxSetup({ cache: false });
+ $('#search').keyup(function(){
+  $('#result').html('');
+  $('#state').val('');
+  var searchField = $('#search').val();
+  var expression = new RegExp(searchField, "i");
+  $.getJSON('data1.json', function(data) {
+   $.each(data, function(key, value){
+    if (value.name.search(expression) != -1 || value.location.search(expression) != -1 || value.tags.search(expression) != -1)
+    {
+     $('#result').append('<li class="list-group-item link-class"><a href="'+value.url+'" target="_blank" ><img src="'+value.image+'" height="40" width="40" class="img-thumbnail" /> '+value.name+' | <span class="text-muted">'+value.location+'</span></a></li>');
+    }
+   });   
+  });
+ });
+ 
+ $('#result').on('click', 'li', function() {
+  var click_text = $(this).text().split('|');
+  $('#search').val($.trim(click_text[0]));
+  $("#result").html('');
+ });
+});
+</script>
+
+
+<script>
+    // value.tags.search(expression) != -1
+    if (value.dependencia.search(expression) == -1 & value.funcion.search(expression) == -1) {
+                console.log('no encontro nada')
+                // if (key === key.tags  ) {
+                 
+                // for (var clave in value.tags){
+                  for (i in value.tags) {
+                    //console.log('ingreso');
+                    //console.log(value.tags[i]);
+                    console.log("La clave es " + value.tags[i]+ " y el valor es " + value.tags[i]);
+                  // Controlando que json realmente tenga esa propiedad
+                  // if (data.hasOwnProperty(value)) {
+                   //Mostrando en pantalla la clave junto a su valor
+                  //console.log("La clave es " + value.tags[i]+ " y el valor es " + value.tags[i]);
+                   //}
+                //     if(value.tags.search(expression) != -1){
+                //       console.log(' encontro tag')
+                //     $("#result").append(
+                //     '<li class="list-group-item link-class" style="color:red"><a href="' +
+                //       value.url +
+                //      '" target="_blank" ><img src="' +
+                //      value.image +
+                //      '" height="40" width="40" class="img-thumbnail" /> ' +
+                //      value.dependencia +
+                //      ' | <span class="text-muted">' +
+                //      value.funcion +
+                //      "</span></a></li>"
+                //  );
+                // }
+                }
+              //}
+               }else{
+                $("#result").append(
+                   '<li class="list-group-item link-class"><a href="' +
+                     value.url +
+                     '" target="_blank" ><img src="' +
+                     value.image +
+                     '" height="40" width="40" class="img-thumbnail" /> ' +
+                     value.dependencia +
+                     ' | <span class="text-muted">' +
+                     value.funcion +
+                     "</span></a></li>"
+                 );
+               }
+</script>
+
+
+<script>
+    if (
+                (value.dependencia.search(expression) != -1) ||
+                (value.funcion.search(expression) != -1) 
+              ) {
+                    console.log("palabra encontrada eb dependencia y/o funcion");
+                    $("#result").append(
+                      '<li class="list-group-item link-class"><a href="' +
+                        value.url +
+                        '" target="_blank" ><img src="' +
+                        value.image +
+                        '" height="40" width="40" class="img-thumbnail" /> ' +
+                        value.dependencia +
+                        ' | <span class="text-muted">' +
+                        value.funcion +
+                        "</span></a></li>"
+                    );  
+              } else {
+                console.log("palabra encontrada en tags");
+                    $("#result").append(
+                      '<li class="list-group-item link-class" style="color:red"><a href="' +
+                        value.url +
+                        '" target="_blank" ><img src="' +
+                        value.image +
+                        '" height="40" width="40" class="img-thumbnail" /> ' +
+                        value.dependencia +
+                        ' | <span class="text-muted">' +
+                        value.funcion +
+                        "</span></a></li>"
+                    );               
+              }
+</script>
+
+<script>
+  // value.tags.search(expression) != -1
+              // if (
+              //   (value.dependencia.search(expression) != -1) ||
+              //   (value.funcion.search(expression) != -1)
+              // ) {
+              //   dataFounded = true;
+              //   console.log("encontro la palabra en funcion y dependencia");
+              //   $("#result").append(
+              //     '<li class="list-group-item link-class"><a href="' +
+              //       value.url +
+              //       '" target="_blank" ><img src="' +
+              //       value.image +
+              //       '" height="40" width="40" class="img-thumbnail" /> ' +
+              //       value.dependencia +
+              //       ' | <span class="text-muted">' +
+              //       value.funcion +
+              //       "</span></a></li>"
+              //   );                
+              // } 
+              
+              // if(dataFounded === false){
+              //   console.log(key)
+              //   console.log("NO encontro la palabra en funcion y dependencia");
+              //   if(key == 'tags'){
+              //     console.log('estamos en tags');
+              //   }
+              // }
+</script>
