@@ -49,8 +49,8 @@ $(document).ready(function() {
         flat : true,
         select_month :false,
         select_year  : false,
-        prev: '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-        next: '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        prev: '<i class="fa fa-angle-left" aria-hidden="true" title="icono"></i>',
+        next: '<i class="fa fa-angle-right" aria-hidden="true" title="icono"></i>'
     });
 
 
@@ -249,8 +249,8 @@ if ($('.player').length > 0) {
             pager: false,
             nextSelector: '.single-slideshow-next',
             prevSelector: '.single-slideshow-prev',
-            nextText: '<i class="fa fa-angle-right" aria-hidden="true"></i>',
-            prevText: '<i class="fa fa-angle-left" aria-hidden="true"></i>'
+            nextText: '<i class="fa fa-angle-right" aria-hidden="true" title="icono"></i>',
+            prevText: '<i class="fa fa-angle-left" aria-hidden="true" title="icono"></i>'
         });
     }
 
@@ -263,8 +263,8 @@ if ($('.player').length > 0) {
             maxSlides: 1,
             nextSelector: '#pager-slideshow-next',
             prevSelector: '#pager-slideshow-prev',
-            nextText: '<i class="fa fa-angle-right" aria-hidden="true"></i>',
-            prevText: '<i class="fa fa-angle-left" aria-hidden="true"></i>'
+            nextText: '<i class="fa fa-angle-right" aria-hidden="true" title="icono"></i>',
+            prevText: '<i class="fa fa-angle-left" aria-hidden="true" title="icono"></i>'
         });
     }
 
