@@ -15,7 +15,7 @@ header.header-transparent {
   background: transparent;
   position: relative;
   z-index: 999;
-  margin: -16 auto;
+  margin: -16px auto;
 }
 header .b-logo a {
   display:inline-flex;

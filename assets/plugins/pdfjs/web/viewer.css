@@ -903,7 +903,7 @@ html[dir='rtl'] .secondaryToolbar {
   height: 0;
   width: 0;
   position: absolute;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 .doorHanger:after,
 .doorHangerRight:after {
@@ -1384,7 +1384,7 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
 
 .bookmark[href='#'] {
   opacity: .5;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .toolbarButton.bookmark::before,

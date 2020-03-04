@@ -3988,9 +3988,9 @@ html .b-video-new-back {
   opacity: .65;
 }
 
-a.btn.disabled,fieldset:disabled a.btn {
+/* a.btn.disabled,fieldset:disabled a.btn {
   pointer-events: none;
-}
+} */
 
 .search-banner.has-bg {
   position: relative;
@@ -4309,7 +4309,7 @@ a.btn.disabled,fieldset:disabled a.btn {
 
 .btn-link.disabled,.btn-link:disabled {
   color: #6c757d;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .btn-group-lg>.btn,.btn-lg {

@@ -14,7 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
 
-    <script type="text/javascript">
+    <script>
       $(window).on("scroll", function() {
         if ($(window).scrollTop()) {
           $("nav").addClass("classNav1");
@@ -23,7 +23,7 @@
         }
       });
     </script>
-    <script type="text/javascript">
+    <script>
       var initialSrc = "assets/media/general/logo_pgn_2019-blanco.png";
       var scrollSrc = "assets/media/general/logo_pgn_2019-1.png";
 
@@ -55,8 +55,8 @@
             alt="logo procuraduria general de la nacion"
           />
         </div>
-        <ul class="nav navbar-nav">
-          <li><a class="active" href="index.html">INICIO</a></li>
+        <ul role="menu" class="nav navbar-nav">
+          <li><a class="active" href="index.html" tabindex="-1">INICIO</a></li>
           <li><a href="factores.html">factores de competencia</a></li>
           <li><a href="normatividad.html">normatividad</a></li>
           <li><a href="dependencias.html">dependencias</a></li>
@@ -205,7 +205,7 @@
               <div class="left-side pull-left wow slideInLeft">
                 <div class="b-big-img">
                   <img
-                    height="700px"
+                    style="height: 700px;"
                     src="assets/media/components/pgnImg/png2.jpg"
                     alt="/"
                   />
