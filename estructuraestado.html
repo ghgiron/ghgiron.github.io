@@ -43,10 +43,6 @@
 
       <!-- Prueba nuevo menu nav-->
       <nav class="nav">
-        <!-- <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <i class="fa fa-bars" aria-hidden="true" title="icono"></i>
-        </label> -->
         <div class="logo">
           <img
             class="img"
@@ -56,7 +52,9 @@
         </div>
         <ul class="nav navbar-nav">
           <li><a href="index.html">INICIO</a></li>
-          <li><a href="factores.html">factores de competencia</a></li>
+          <li>
+            <a href="factores.html">factores de competencia</a>
+          </li>
           <li><a href="normatividad.html">normatividad</a></li>
           <li><a href="dependencias.html">dependencias</a></li>
           <li>
@@ -65,7 +63,7 @@
             >
           </li>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown"
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"
               >directorios<span class="caret"></span
             ></a>
             <ul class="dropdown-menu">
@@ -73,15 +71,23 @@
                 <a href="notarias.html" style="line-height: 30px;">Notarías</a>
               </li>
               <li>
+                <a href="resolucion2132013.html" style="line-height: 30px;"
+                  >municipios RESOLUCION 213 DE 2003</a
+                >
+              </li>
+              <li>
                 <a href="camarascomercio.html" style="line-height: 30px;"
                   >Camaras de Comercio</a
                 >
               </li>
               <li>
-                <a href="https://www.procuraduria.gov.co/portal/sedes.page" target="_blank" style="line-height: 30px;"
+                <a
+                  href="https://www.procuraduria.gov.co/portal/sedes.page"
+                  target="_blank"
+                  style="line-height: 30px;"
                   >Procuradurías a Nivel Territorial</a
                 >
-              </li>     
+              </li>
             </ul>
           </li>
           <li>
@@ -191,21 +197,19 @@
                           alt="organigrama de la Procuraduria"
                           class="img-responsive"
                         />
+
                         <div class="gallery-item-hover">
+                          
                           <a
                             href="assets/media/components/pgnImg/organigramaProcuraduria.png"
                             target="_blank"
                             class="js-zoom-gallery__item"
-                          >
+                          > 
                             <span class="item-hover-icon"
                               ><i class="fa fa-search" aria-hidden="true"></i
                             ></span>
 
-                            <img
-                              src="assets/media/components/pgnImg/organigramaProcuraduria1.jpg"
-                              alt="organigrama de la Procuraduria"
-                              class="img-responsive"
-                            />
+                          
                           </a>
                         </div>
                       </div>
@@ -217,6 +221,9 @@
                       </div>
                     </div>
                   </div>
+                  <figure>
+                    <img src="http://via.placeholder.com/500x500" data-zooming-width="1000" data-zooming-height="1000" />
+                  </figure>
                 </div>
               </div>
             </div>
@@ -272,8 +279,14 @@
                     Código postal: 110321
                   </li>
                   <li>
-                    <p>Horario de atención y de recepción de correspondencia: 8 a.m. a 5 p.m. (Jornada Continua) </p> 
-                    <p style="padding-top: 1em;">Horario de atención telefónica: 7 a.m. a 8 p.m. (Jornada Continua) </p>
+                    <p>
+                      Horario de atención y de recepción de correspondencia: 8
+                      a.m. a 5 p.m. (Jornada Continua)
+                    </p>
+                    <p style="padding-top: 1em;">
+                      Horario de atención telefónica: 7 a.m. a 8 p.m. (Jornada
+                      Continua)
+                    </p>
                   </li>
                 </ul>
               </div>
@@ -300,7 +313,10 @@
         </div>
       </div>
     </footer>
-
+    <script src="/assets/js/zooming.js"></script>
+    <script>
+      new Zooming().listen('img')
+    </script>
     <!-- MAIN SCRIPTS-->
     <script src="assets/libs/jquery-1.12.4.min.js"></script>
     <script src="assets/libs/jquery-migrate-1.2.1.js"></script>

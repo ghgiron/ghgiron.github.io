@@ -10,28 +10,88 @@
     <meta content="telephone=no" name="format-detection" />
     <meta name="HandheldFriendly" content="true" />
     <link rel="stylesheet" href="assets/css/master.css" />
-    <link rel="icon" type="image/x-icon" href="favicon.png" />
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<link rel="icon" type="image/x-icon" href="favicon.png" />
+	<script src="assets/libs/jquery-1.12.4.min.js"></script>
+
+	<style>
+		.search {
+			 width: 100%;
+		   }
+		   .search .field {
+			 position: relative;
+		   }
+		   .search label {
+			 background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAAxElEQVR4AXXPIUuDcRDA4Zv4AUSwTLEKVoNlySyCYLO98CCsahGrX0AW/QhmBRHEJghLS4JFBBXDgrJi2In78w8v4v3S8XDh4nd0DTxLEzd2RC2EnrH07trQVDrXqbhs7FvfnBDWDKWTigOpL2oWvZpYKPjio1zVHEt7BdOtaLUtHRX8MmqjRjooeCVttPBOWi+4JT1aLaDjVLpU/5ytn840Dj1IaWSpYmi8yVlTF54qh9K8nn27usJK5fC3yvfhPx7a/AE9dYwDEfKrlAAAAABJRU5ErkJggg==)
+			   no-repeat 0 50%;
+			 color: #b2b2b2;
+			 left: 50%;
+			 position: absolute;
+			 transform: translate(-50%, -50%);
+			 top: 50%;
+			 transition: left 0.4s, transform 0.4s;
+			 padding-left: 1.25em;
+		   }
+		   .search .input-search {
+			 border: 1px solid #dfdfdf;
+			 border-radius: 0.25em;
+			 box-shadow: 0 1px 0 #bfbebf;
+			 display: block;
+			 font: 400 1em/1.5em sans-serif;
+			 padding: 0.5em 1.75em;
+			 width: 100%;
+			 color: dimgray;
+		   }
+		   .search .input-search:focus + label,
+		   .search .input-search:valid + label {
+			 left: 0.5em;
+			 transform: translate(0, -50%);
+		   }
+		   .search .input-search:valid + label {
+			 text-indent: -9999px;
+		   }
+	 </style>
+
+<script>
+	function myFunction() {
+	  var input, filter, table, tr, td, i, txtValue;
+	  input = document.getElementById("myInput");
+	  filter = input.value.toUpperCase();
+	  table = document.getElementById("myTable");
+	  tr = table.getElementsByTagName("tr");
+	  for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[1];
+		if (td) {
+		  txtValue = td.textContent || td.innerText;
+		  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			tr[i].style.display = "";
+		  } else {
+			tr[i].style.display = "none";
+		  }
+		}       
+	  }
+	}
+	</script>
 
     <script type="text/javascript">
-      $(window).on("scroll", function() {
-        if ($(window).scrollTop()) {
-          $("nav").addClass("classNav1");
-        } else {
-          $("nav").removeClass("classNav1");
-        }
-      });
-    </script>
-    <script type="text/javascript">
-      var initialSrc = "assets/media/general/logo_pgn_2019-blanco.png";
-      var scrollSrc = "assets/media/general/logo_pgn_2019-1.png";
-
-      $(window).scroll(function() {
-        var value = $(this).scrollTop();
-        if (value > 100) $(".img").attr("src", scrollSrc);
-        else $(".img").attr("src", initialSrc);
-      });
-    </script>
+		$(window).on("scroll", function() {
+		  if ($(window).scrollTop()) {
+			$("nav").addClass("classNav1");
+		  } else {
+			$("nav").removeClass("classNav1");
+		  }
+		});
+	  </script>
+	  <script type="text/javascript">
+		var initialSrc = "assets/media/general/logo_pgn_2019-blanco.png";
+		var scrollSrc = "assets/media/general/logo_pgn_2019-1.png";
+  
+		$(window).scroll(function() {
+		  var value = $(this).scrollTop();
+		  if (value > 100) $(".img").attr("src", scrollSrc);
+		  else $(".img").attr("src", initialSrc);
+		});
+	  </script>
+	
   </head>
   <body>
     <div class="b-page-wrap">
@@ -42,11 +102,7 @@
       <!-- Loader end-->
 
       <!-- Prueba nuevo menu -->
-      <nav class="nav">
-         <!--<input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <i class="fa fa-bars" aria-hidden="true" title="icono"></i>
-        </label> --> 
+	  <nav class="nav">
         <div class="logo">
           <img
             class="img"
@@ -54,9 +110,11 @@
             alt="logo procuraduria general de la nacion"
           />
         </div>
-        <ul class="nav navbar-nav" role="menu" tabindex="0">
+        <ul class="nav navbar-nav">
           <li><a href="index.html">INICIO</a></li>
-          <li><a href="factores.html">factores de competencia</a></li>
+          <li>
+            <a  href="factores.html">factores de competencia</a>
+          </li>
           <li><a href="normatividad.html">normatividad</a></li>
           <li><a href="dependencias.html">dependencias</a></li>
           <li>
@@ -65,7 +123,7 @@
             >
           </li>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown"
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"
               >directorios<span class="caret"></span
             ></a>
             <ul class="dropdown-menu">
@@ -73,18 +131,23 @@
                 <a href="notarias.html" style="line-height: 30px;">Notarías</a>
               </li>
               <li>
-                <a
-                  class="active"
-                  href="camarascomercio.html"
-                  style="line-height: 30px;"
+                <a href="resolucion2132013.html" style="line-height: 30px;"
+                  >municipios RESOLUCION 213 DE 2003</a
+                >
+              </li>
+              <li>
+                <a class="active" href="camarascomercio.html" style="line-height: 30px;"
                   >Camaras de Comercio</a
                 >
-			  </li>
-			  <li>
-                <a href="https://www.procuraduria.gov.co/portal/sedes.page" target="_blank" style="line-height: 30px;"
+              </li>
+              <li>
+                <a
+                  href="https://www.procuraduria.gov.co/portal/sedes.page"
+                  target="_blank"
+                  style="line-height: 30px;"
                   >Procuradurías a Nivel Territorial</a
                 >
-              </li>     
+              </li>
             </ul>
           </li>
           <li>
@@ -137,14 +200,31 @@
             <i class="fa fa-angle-down" aria-hidden="true" title="icono"></i>
           </div>
           <div class="b-blog-single">
+			
 			<div class="blog-item-caption">
                 <h5 class="small-title" style="text-align: center;">
                   MIEMBROS 2015 - 2018
                 </h5>
               </div>
    
-			<section style="width: 1200px; position: relative;">
-				<div class="tbl-header" style="left: 200px;">
+			<section style="width: 1000px; position: relative;">
+				
+				<div class="tbl-header" style="left: 300px;">
+					<div  class="search">
+						<div class="field">
+						  <input
+						  onkeyup="myFunction()" 
+							type="text"
+							class="input-search"
+							id="myInput"
+							name="myInput"
+							required
+							title="Busque por Ciudad.."
+						  />
+						  <label for="search">Busque por Ciudad..</label>
+						</div>
+					  </div>
+				
 				  <table >
 					<thead>
 					  <tr>
@@ -157,8 +237,8 @@
 					</thead>
 				  </table>
 				</div>
-				<div class="tbl-content" style="left: 200px;"> 					
-						<table
+				<div class="tbl-content" style="left: 300px;"> 					
+						<table id="myTable"
 						  summary="Esta tabla presenta informació sobre las Cámaras de Comercio de Colombia"
 						  class=" table-hover table-hover-cells" 
 						>
@@ -636,7 +716,7 @@
       </div>
     </footer>
     <!-- MAIN SCRIPTS-->
-    <script src="assets/libs/jquery-1.12.4.min.js"></script>
+
     <script src="assets/libs/jquery-migrate-1.2.1.js"></script>
     <!-- Bootstrap-->
     <script src="assets/libs/bootstrap/bootstrap.min.js"></script>

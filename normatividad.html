@@ -11,29 +11,125 @@
 		<meta name="HandheldFriendly" content="true"/>
 		<link rel="stylesheet" href="assets/css/master.css"/>
 		<link rel="icon" type="image/x-icon" href="favicon.png"/>
-        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-
+		<script src="assets/libs/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="/assets/js/jquery.mark.min.js"></script>
 		<script type="text/javascript">
-			$(window).on('scroll', function(){
-				if($(window).scrollTop()){
-					$('nav').addClass('classNav1');
-				}else{
-					$('nav').removeClass('classNav1');
+		  $(window).on("scroll", function() {
+			if ($(window).scrollTop()) {
+			  $("nav").addClass("classNav1");
+			} else {
+			  $("nav").removeClass("classNav1");
+			}
+		  });
+		</script>
+		<script type="text/javascript">
+		  var initialSrc = "assets/media/general/logo_pgn_2019-blanco.png";
+		  var scrollSrc = "assets/media/general/logo_pgn_2019-1.png";
+	
+		  $(window).scroll(function() {
+			var value = $(this).scrollTop();
+			if (value > 100) $(".img").attr("src", scrollSrc);
+			else $(".img").attr("src", initialSrc);
+		  });
+		</script>
+		<!-- buscador interno -->
+		<style id="filter">
+		  mark {
+			background: yellow;
+		  }
+	
+		  mark.current {
+			background: orange;
+		  }
+		</style>
+	
+		<script>
+		  window.onload = function() {
+			$(function() {
+			  // the input field
+			  var $input = $("input[type='search']"),
+				// clear button
+				$clearBtn = $("button[data-search='clear']"),
+				// prev button
+				$prevBtn = $("a[data-search='prev']"),
+				// next button
+				$nextBtn = $("a[data-search='next']"),
+				// the context where to search
+				$content = $(".b-layer-main"),
+				// jQuery object to save <mark> elements
+				$results,
+				// the class that will be appended to the current
+				// focused element
+				currentClass = "current",
+				// top offset for the jump (the search bar)
+				offsetTop = 130,
+				// the current index of the focused element
+				currentIndex = 0;
+	
+			  /**
+			   * Jumps to the element matching the currentIndex
+			   */
+			  function jumpTo() {
+				if ($results.length) {
+				  var position,
+					$current = $results.eq(currentIndex);
+				  $results.removeClass(currentClass);
+				  if ($current.length) {
+					$current.addClass(currentClass);
+					position = $current.offset().top - offsetTop;
+					window.scrollTo(0, position);
+					console.log(position);
+				  }
 				}
-			})
-		</script>
-		<script type="text/javascript">
-			var initialSrc = "assets/media/general/logo_pgn_2019-blanco.png";
-			var scrollSrc = "assets/media/general/logo_pgn_2019-1.png";
-
-			$(window).scroll(function() {
-   				var value = $(this).scrollTop();
-   				if (value > 100)
-      			$(".img").attr("src", scrollSrc);
-   				else
-      			$(".img").attr("src", initialSrc);
+			  }
+	
+			  /**
+			   * Searches for the entered keyword in the
+			   * specified context on input
+			   */
+			  $input.on("input", function() {
+				var searchVal = this.value;
+				$content.unmark({
+				  done: function() {
+					$content.mark(searchVal, {
+					  separateWordSearch: true,
+					  done: function() {
+						$results = $content.find("mark");
+						currentIndex = 0;
+						jumpTo();
+					  }
+					});
+				  }
+				});
+			  });
+	
+			  /**
+			   * Clears the search
+			   */
+			  $clearBtn.on("click", function() {
+				$content.unmark();
+				$input.val("").focus();
+			  });
+	
+			  /**
+			   * Next and previous search jump to
+			   */
+			  $nextBtn.add($prevBtn).on("click", function() {
+				if ($results.length) {
+				  currentIndex += $(this).is($prevBtn) ? -1 : 1;
+				  if (currentIndex < 0) {
+					currentIndex = $results.length - 1;
+				  }
+				  if (currentIndex > $results.length - 1) {
+					currentIndex = 0;
+				  }
+				  jumpTo();
+				}
+			  });
 			});
+		  };
 		</script>
+		<!-- fin buscador interno -->
 	</head>
 	<body>
 		<div class="b-page-wrap">
@@ -60,6 +156,7 @@
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#">directorios<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="notarias.html" style="line-height: 30px;" >Notarías</a></li>
+							<li><a href="resolucion2132013.html" style="line-height: 30px;">municipios RESOLUCION 213 DE 2003</a></li>  
 							<li><a href="camarascomercio.html" style="line-height: 30px;">Camaras de Comercio</a></li>
 							<li>
 								<a href="https://www.procuraduria.gov.co/portal/sedes.page" target="_blank" style="line-height: 30px;"
@@ -114,13 +211,13 @@
                     </div>
 					<div class="b-page-content with-layer-bg">
                         <div class="container">
-							<section id="sec1">
-								<div class="row" style="padding-top: 50px;">
-								  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						
+								<div class="row" >
+								  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
 									<div class="b-blog-single-content wow slideInLeft">
 									  <div
 										class="blog-item-content clearfix"
-										style="padding-left: 70px; padding-right: 70px; padding-top: 50px;padding-top: 30px; padding-bottom: 60px;"
+										style="padding-left: 10px; padding-right: 10px; padding-top: 30px; padding-bottom: 60px;"
 									  >
 										<div class="blog-item-caption">
 										  <h4 class="item-name">
@@ -166,7 +263,7 @@
 											El Procurador General de la Nación, por sí o por medio de sus delegados y agentes, tendrá las siguientes funciones:
 										  </p>
 										  <br>
-										  <div class="b-text-list" style=" padding-left: 70px;padding-right: 70px; padding-bottom: 1px;">
+										  <div class="b-text-list" style=" padding-left: 45px;padding-right: 10px; padding-bottom: 1px;">
 											<ul class="list-unstyled">
 											  <li>
 												<div class="liG" style=" line-height: 1.9 ">
@@ -285,7 +382,7 @@
 										  El Procurador General de la Nación ejercerá directamente las siguientes funciones:
 										</p>
 										<br>
-										<div class="b-text-list" style=" padding-left: 70px;padding-right: 70px; padding-bottom: 1px;">
+										<div class="b-text-list" style=" padding-left: 45px;padding-right: 10px; padding-bottom: 1px;">
 											<ul class="list-unstyled">
 											  <li>
 												<div class="liG" style=" line-height: 1.9 ">
@@ -353,484 +450,510 @@
 										</div>
 									  </div>
 									</div>
-								  </div>
-								</div>
-							  </section>
-							  <section id="sec1">
-								<div class="row" style="padding-top: 50px;">
-								  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-									<div class="b-blog-single-content wow slideInLeft">
-									  <div
-										class="blog-item-content clearfix"
-										style="padding-left: 70px; padding-right: 70px; padding-top: 50px;padding-top: 30px; padding-bottom: 60px;"
-									  >
-								
-				  
-										<div class="b-text wow fadeInUp">
-											<div class="b-links" >
-												<ul class="list-unstyled" style="background: transparent; padding: 0; border: none;">
-													<li >
-														<p class="inline-title text-uppercase">
-															<h4 class="item-name">
-																NORMATIVIDAD DEPENDENCIAS
+									<div class="b-blog-single-content wow slideInUp">
+										<div
+										  class="blog-item-content clearfix"
+										  style="padding-left: 70px; padding-right: 70px; padding-top: 50px;padding-top: 30px; padding-bottom: 60px;"
+										>
+								  
 					
-															  </h4>
-														</p>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/Decreto 262 2014.pdf" target="_blank" style="font-size: 16px;">
-															Decreto 262 de 2000
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/544_resolucion166-03.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 166 de 2003
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/CODIGODISCIPLINARIO.pdf" target="_blank" style="font-size: 16px;">
-															Ley 734 de 2002
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/486_resolucion 17-00.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 017 de 2000
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/364_resolucion371-05.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 371 de 2005
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/440_resolucion194-2011.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 194 de 2011
-														</a>
-													</li>
-													<li>
-														<a href="http://www.suin.gov.co/viewDocument.asp?ruta=Leyes/1680117" target="_blank" style="font-size: 16px;">
-															Ley 1437 de 2011
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/portal/media/file/elecciones/67_RESOLUCI%C3%93N 158-2015-CREACI%C3%93N COMISI%C3%93N Y GRUPO CONTROL ELECTORAL.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 158 de 2015
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/43  Resolucion-394-2017.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 394 de 2017
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/486_resolucion 17-00.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 108 de 2012
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/portal/media/file/portal_doc_interes/288_RES255_01022019.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 255 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/flas_juridico/2434_PGN Resolucion530-2019.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 530 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoRel&relId=MjMxNDIy&mode=1#page=inline" target="_blank" style="font-size: 16px;">
-															Resolución 653 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="http://www.suin-juriscol.gov.co/clp/contenidos.dll/Resolucion/4029056?fn=document-frame.htm$f=templates$3.0" target="_blank" style="font-size: 16px;">
-															esolución 210 de 2009
-														</a>
-													</li>
-													<li>
-														<a href="http://es.presidencia.gov.co/normativa/normativa/DECRETO 2124 DEL 18 DE DICIEMBRE DE 2017.pdf" target="_blank" style="font-size: 16px;">
-															Decreto 2124 de 2017
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/flas_juridico/1721_PGN Directiva 002 DE 2017.pdf" target="_blank" style="font-size: 16px;">
-															Directiva 002 de 2017
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoWeb&elementId=ALERO_MAIN::201911180924520::RELATO_DATA_TYPE&docId=231284&mode=1#page=inline,,toolbar=no,location=no,status=yes,menubar=no,resizable=yes,scrollbars=yes" target="_blank" style="font-size: 16px;">
-															Directiva 001 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/PGN Circular No_ 024  de 2019 .pdf" target="_blank" style="font-size: 16px;">
-															Circular 024 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoWeb&elementId=ALERO_MAIN::201911180922340::RELATO_DATA_TYPE&docId=231939&mode=1#page=inline,,toolbar=no,location=no,status=yes,menubar=no,resizable=yes,scrollbars=yes" target="_blank" style="font-size: 16px;">
-															Circular 22 del 2019
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/flas_juridico/1722_PGN Resolucion254-2017.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 254 de 2017
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/549_resolucion456-08.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 456 de 2008
-														</a>
-													</li>
-													<li>
-														<a href="https://www.unidadvictimas.gov.co/sites/default/files/documentosbiblioteca/ley-387-de-1997.pdf" target="_blank" style="font-size: 16px;">
-															Ley 387 de 1997
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1448_2011.html" target="_blank" style="font-size: 16px;">
-															Ley 1448 de 2011
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/decreto_4633_2011.html" target="_blank" style="font-size: 16px;">
-															Decreto Ley 4633 de 2011
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/decreto_4635_2011.html" target="_blank" style="font-size: 16px;">
-															Decreto Ley 4635 de 2011
-														</a>
-													</li>
-													<li>
-														<a href="http://www.suin-juriscol.gov.co/viewDocument.asp?ruta=Decretos/1127223" target="_blank" style="font-size: 16px;">
-															Decreto 599 de 2012
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoWeb&elementId=ALERO_MAIN::201912060950320::RELATO_DATA_TYPE&docId=232214&mode=1#page=inline,,toolbar=no,location=no,status=yes,menubar=no,resizable=yes,scrollbars=yes" target="_blank" style="font-size: 16px;">
-															Resolución 020 de 2020
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/decreto_4634_2011.html" target="_blank" style="font-size: 16px;">
-															Decreto Ley 4634 de 2011
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1561_2012.html" target="_blank" style="font-size: 16px;">
-															Ley 1561 de 2012
-														</a>
-													</li>
-													<li>
-														<a href="http://www.suin-juriscol.gov.co/viewDocument.asp?ruta=Decretos/30019931" target="_blank" style="font-size: 16px;">
-															Decreto 1071 de 2015
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_0099_1993.html" target="_blank" style="font-size: 16px;">
-															Ley 99 de 1993
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_0160_1994.html" target="_blank" style="font-size: 16px;">
-															Ley 160 de 1994
-														</a>
-													</li>
-													<li>
-														<a href="http://www.suin-juriscol.gov.co/viewDocument.asp?ruta=Decretos/1059749" target="_blank" style="font-size: 16px;">
-															Decreto Ley 262 de 2000
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1333_2009.html" target="_blank" style="font-size: 16px;">
-															Ley 1333 de 2009
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1801_2016.html" target="_blank" style="font-size: 16px;">
-															Ley 1801 de 2016
-														</a>
-													</li>
-													<li>
-														<a href="https://www.minagricultura.gov.co/Normatividad/Decretos/Decreto Ley No. 902 de 2017.pdf" target="_blank" style="font-size: 16px;">
-															Decreto Ley 902 de 2017
-														</a>
-													</li>
-													<li>
-														<a href="https://apps.procuraduria.gov.co/guia/gd/docs/d1076015.html" target="_blank" style="font-size: 16px;">
-															Decreto 1076 de 2015
-														</a>
-													</li>
-													<li>
-														<a href="https://apps.procuraduria.gov.co/guia/gd/docs/d1076015.html" target="_blank" style="font-size: 16px;">
-															Decreto 1076 de 2015
-														</a>
-													</li>
-													<li>
-														<a href="http://www.minvivienda.gov.co/NormativaInstitucional/1077 - 2015.pdf" target="_blank" style="font-size: 16px;">
-															Decreto 1077 de 2015
-														</a>
-													</li>
-													<li>
-														<a href="http://suin-juriscol.gov.co/viewDocument.asp?ruta=Decretos/1878873" target="_blank" style="font-size: 16px;">
-															Decreto 3930 de 2010
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/5 resolucion046-2017 cambio nombre ambiental.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 46 de 2017
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/portal/media/file/180216_RES_066_DOC021418-02142018155948.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 066 de 2018
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/flas_juridico/2024_PGN-Resoluci%C3%B3n 138 de 2018.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 138 de 2018
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoRel&relId=MjMxNjU1&mode=1#page=inline" target="_blank" style="font-size: 16px;">
-															Resolución 831 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoRel&relId=MjMxMDcx&mode=1#page=inline" target="_blank" style="font-size: 16px;">
-															Resolución 462 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1581_2012.html" target="_blank" style="font-size: 16px;">
-															Ley 1581 de 2012
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1708_2014.html" target="_blank" style="font-size: 16px;">
-															Ley 1708 de 2014
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1712_2014.html" target="_blank" style="font-size: 16px;">
-															Ley 1712 de 2014
-														</a>
-													</li>
-													<li>
-														<a href="sinlink" target="_blank" style="font-size: 16px;">
-															Resolución 891 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_0100_1993.html" target="_blank" style="font-size: 16px;">
-															Ley 100 de 1993
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1751_2015.html" target="_blank" style="font-size: 16px;">
-															Ley Estatutaria 1751 de 2015
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/portal/media/file/info_gel_archivos/1/128_RESOLUCION 780 DE 2016.pdf" target="_blank" style="font-size: 16px;">
-															Decreto 780 de 2016
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/4%20resolucion045-2017%20cambio%20nombre%20delegadas.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 045 de 2017
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoRel&relId=MjMwMjk3&mode=1#page=inline target="_blank" style="font-size: 16px;">
-															Resolución 242 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="sinlink" target="_blank" style="font-size: 16px;">
-															Resolución 096 de 2017
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/1734_resolucion337-2017.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 337 de 2017
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/flas_juridico/2395_PGN Resoluci%C3%B3n 376 de 2019.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 376 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/portal/media/file/Resolucion 222 de 2001.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 222 de 2001
-														</a>
-													</li>
-													<li>
-														<a href="sinlink" target="_blank" style="font-size: 16px;">
-															Resolución 1047 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="http://www.suin-juriscol.gov.co/viewDocument.asp?id=4019022" target="_blank" style="font-size: 16px;">
-															Resolución 116 de 2010
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1367_2009.html" target="_blank" style="font-size: 16px;">
-															Ley 1367 de 2009
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/DirectivaDDH/R-104-2017.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 104 de 2017
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/flas_juridico/1909_ACTO LEGISLATIVO N%C2%B0 01 DE 18 DE ENERO DE 2018.pdf" target="_blank" style="font-size: 16px;">
-															Acto Legislativo 01 de 2018
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/411_resolucion215-2010.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 215 de 2010
-														</a>
-													</li>
-													<li>
-														<a href="http://www.suin-juriscol.gov.co/viewDocument.asp?id=30035826" target="_blank" style="font-size: 16px;">
-															Decreto 1511 de 2018
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/DirectivaDDH/R-099-2017.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 099 de 2017
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/portal/media/file/portal_doc_interes/289_RES256_01022019.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 256 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoRel&relId=MjI5ODA4&mode=1#page=inline" target="_blank" style="font-size: 16px;">
-															Resolución 763 de 2018
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/flas_juridico/2332_PGN Resoluci%C3%B3n 260 de 2019 .pdf" target="_blank" style="font-size: 16px;">
-															Resolución 260 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoWeb&elementId=ALERO_MAIN::201908211046010::RELATO_DATA_TYPE&docId=7233&mode=1#page=inline,,toolbar=no,location=no,status=yes,menubar=no,resizable=yes,scrollbars=yes" target="_blank" style="font-size: 16px;">
-															Directiva 10 de 2005
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/CODIGODISCIPLINARIO.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 456 de 2017
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1796_2016.html" target="_blank" style="font-size: 16px;">
-															Ley 1796 de 2016
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1098_2006.html" target="_blank" style="font-size: 16px;">
-															Ley 1098 de 2006
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1996_2019.html" target="_blank" style="font-size: 16px;">
-															Ley 1564 de 2012
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoRel&relId=MjMxNTg0&mode=1#page=inline" target="_blank" style="font-size: 16px;">
-															Resolución 784 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1257_2008.html" target="_blank" style="font-size: 16px;">
-															Ley 1257 de 2008
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1336_2009.html" target="_blank" style="font-size: 16px;">
-															Ley 1336 de 2009
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1719_2014.html" target="_blank" style="font-size: 16px;">
-															Ley 1719 de 2014
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1761_2015.html" target="_blank" style="font-size: 16px;">
-															Ley 1761 de 2015
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1773_2016.html" target="_blank" style="font-size: 16px;">
-															Ley 1773 de 2016
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1959_2019.html" target="_blank" style="font-size: 16px;">
-															Ley 1959 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="http://www.suin-juriscol.gov.co/viewDocument.asp?ruta=Decretos/1551034" target="_blank" style="font-size: 16px;">
-															Decreto 4799 de 2011
-														</a>
-													</li>
-													<li>
-														<a href="http://www.suin-juriscol.gov.co/viewDocument.asp?id=30038034" target="_blank" style="font-size: 16px;">
-															Decreto 1630 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="sinlink" target="_blank" style="font-size: 16px;">
-															Resolución Interna No.1050 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1996_2019.html" target="_blank" style="font-size: 16px;">
-															Ley 1996 de 2019
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1622_2013.html" target="_blank" style="font-size: 16px;">
-															Ley 1622 de 2013
-														</a>
-													</li>
-													<li>
-														<a href="https://www.procuraduria.gov.co/relatoria/media/file/4 resolucion045-2017 cambio nombre delegadas.pdf" target="_blank" style="font-size: 16px;">
-															Resolución 45 de 2017
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_0716_2001.html" target="_blank" style="font-size: 16px;">
-															Ley 716 de 2001 
-														</a>
-													</li>
-													<li>
-														<a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1116_2006.html" target="_blank" style="font-size: 16px;">
-															Ley 1116 de 2006
-														</a>
-													</li>
-												</ul>
-											</div>
-									
+										  <div class="b-text wow fadeInUp">
+											  <div class="b-links" >
+												  <ul class="list-unstyled" style="background: transparent; padding: 0; border: none;">
+													  <li >
+														  <p class="inline-title text-uppercase">
+															  <h4 class="item-name">
+																  NORMATIVIDAD DEPENDENCIAS
+					  
+																</h4>
+														  </p>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/Decreto 262 2014.pdf" target="_blank" style="font-size: 16px;">
+															  Decreto 262 de 2000
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/544_resolucion166-03.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 166 de 2003
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/CODIGODISCIPLINARIO.pdf" target="_blank" style="font-size: 16px;">
+															  Ley 734 de 2002
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/486_resolucion 17-00.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 017 de 2000
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/364_resolucion371-05.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 371 de 2005
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/440_resolucion194-2011.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 194 de 2011
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.suin.gov.co/viewDocument.asp?ruta=Leyes/1680117" target="_blank" style="font-size: 16px;">
+															  Ley 1437 de 2011
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/portal/media/file/elecciones/67_RESOLUCI%C3%93N 158-2015-CREACI%C3%93N COMISI%C3%93N Y GRUPO CONTROL ELECTORAL.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 158 de 2015
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/43  Resolucion-394-2017.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 394 de 2017
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/486_resolucion 17-00.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 108 de 2012
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/portal/media/file/portal_doc_interes/288_RES255_01022019.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 255 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/flas_juridico/2434_PGN Resolucion530-2019.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 530 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoRel&relId=MjMxNDIy&mode=1#page=inline" target="_blank" style="font-size: 16px;">
+															  Resolución 653 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.suin-juriscol.gov.co/clp/contenidos.dll/Resolucion/4029056?fn=document-frame.htm$f=templates$3.0" target="_blank" style="font-size: 16px;">
+															  esolución 210 de 2009
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://es.presidencia.gov.co/normativa/normativa/DECRETO 2124 DEL 18 DE DICIEMBRE DE 2017.pdf" target="_blank" style="font-size: 16px;">
+															  Decreto 2124 de 2017
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/flas_juridico/1721_PGN Directiva 002 DE 2017.pdf" target="_blank" style="font-size: 16px;">
+															  Directiva 002 de 2017
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoWeb&elementId=ALERO_MAIN::201911180924520::RELATO_DATA_TYPE&docId=231284&mode=1#page=inline,,toolbar=no,location=no,status=yes,menubar=no,resizable=yes,scrollbars=yes" target="_blank" style="font-size: 16px;">
+															  Directiva 001 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/PGN Circular No_ 024  de 2019 .pdf" target="_blank" style="font-size: 16px;">
+															  Circular 024 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoWeb&elementId=ALERO_MAIN::201911180922340::RELATO_DATA_TYPE&docId=231939&mode=1#page=inline,,toolbar=no,location=no,status=yes,menubar=no,resizable=yes,scrollbars=yes" target="_blank" style="font-size: 16px;">
+															  Circular 22 del 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/flas_juridico/1722_PGN Resolucion254-2017.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 254 de 2017
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/549_resolucion456-08.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 456 de 2008
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.unidadvictimas.gov.co/sites/default/files/documentosbiblioteca/ley-387-de-1997.pdf" target="_blank" style="font-size: 16px;">
+															  Ley 387 de 1997
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1448_2011.html" target="_blank" style="font-size: 16px;">
+															  Ley 1448 de 2011
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/decreto_4633_2011.html" target="_blank" style="font-size: 16px;">
+															  Decreto Ley 4633 de 2011
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/decreto_4635_2011.html" target="_blank" style="font-size: 16px;">
+															  Decreto Ley 4635 de 2011
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.suin-juriscol.gov.co/viewDocument.asp?ruta=Decretos/1127223" target="_blank" style="font-size: 16px;">
+															  Decreto 599 de 2012
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoWeb&elementId=ALERO_MAIN::201912060950320::RELATO_DATA_TYPE&docId=232214&mode=1#page=inline,,toolbar=no,location=no,status=yes,menubar=no,resizable=yes,scrollbars=yes" target="_blank" style="font-size: 16px;">
+															  Resolución 020 de 2020
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/decreto_4634_2011.html" target="_blank" style="font-size: 16px;">
+															  Decreto Ley 4634 de 2011
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1561_2012.html" target="_blank" style="font-size: 16px;">
+															  Ley 1561 de 2012
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.suin-juriscol.gov.co/viewDocument.asp?ruta=Decretos/30019931" target="_blank" style="font-size: 16px;">
+															  Decreto 1071 de 2015
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_0099_1993.html" target="_blank" style="font-size: 16px;">
+															  Ley 99 de 1993
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_0160_1994.html" target="_blank" style="font-size: 16px;">
+															  Ley 160 de 1994
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/Decreto%20262%202014.pdf" target="_blank" style="font-size: 16px;">
+															  Decreto Ley 262 de 2000
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1333_2009.html" target="_blank" style="font-size: 16px;">
+															  Ley 1333 de 2009
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1801_2016.html" target="_blank" style="font-size: 16px;">
+															  Ley 1801 de 2016
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.minagricultura.gov.co/Normatividad/Decretos/Decreto Ley No. 902 de 2017.pdf" target="_blank" style="font-size: 16px;">
+															  Decreto Ley 902 de 2017
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://apps.procuraduria.gov.co/guia/gd/docs/d1076015.html" target="_blank" style="font-size: 16px;">
+															  Decreto 1076 de 2015
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://apps.procuraduria.gov.co/guia/gd/docs/d1076015.html" target="_blank" style="font-size: 16px;">
+															  Decreto 1076 de 2015
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.minvivienda.gov.co/NormativaInstitucional/1077 - 2015.pdf" target="_blank" style="font-size: 16px;">
+															  Decreto 1077 de 2015
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://suin-juriscol.gov.co/viewDocument.asp?ruta=Decretos/1878873" target="_blank" style="font-size: 16px;">
+															  Decreto 3930 de 2010
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/5 resolucion046-2017 cambio nombre ambiental.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 46 de 2017
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/portal/media/file/180216_RES_066_DOC021418-02142018155948.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 066 de 2018
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/flas_juridico/2024_PGN-Resoluci%C3%B3n 138 de 2018.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 138 de 2018
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoRel&relId=MjMxNjU1&mode=1#page=inline" target="_blank" style="font-size: 16px;">
+															  Resolución 831 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoRel&relId=MjMxMDcx&mode=1#page=inline" target="_blank" style="font-size: 16px;">
+															  Resolución 462 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1581_2012.html" target="_blank" style="font-size: 16px;">
+															  Ley 1581 de 2012
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1708_2014.html" target="_blank" style="font-size: 16px;">
+															  Ley 1708 de 2014
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1712_2014.html" target="_blank" style="font-size: 16px;">
+															  Ley 1712 de 2014
+														  </a>
+													  </li>
+													  <li>
+														  <a href="sinlink" target="_blank" style="font-size: 16px;">
+															  Resolución 891 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_0100_1993.html" target="_blank" style="font-size: 16px;">
+															  Ley 100 de 1993
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1751_2015.html" target="_blank" style="font-size: 16px;">
+															  Ley Estatutaria 1751 de 2015
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/portal/media/file/info_gel_archivos/1/128_RESOLUCION 780 DE 2016.pdf" target="_blank" style="font-size: 16px;">
+															  Decreto 780 de 2016
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/4%20resolucion045-2017%20cambio%20nombre%20delegadas.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 045 de 2017
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoRel&relId=MjMwMjk3&mode=1#page=inline target="_blank" style="font-size: 16px;">
+															  Resolución 242 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="sinlink" target="_blank" style="font-size: 16px;">
+															  Resolución 096 de 2017
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/1734_resolucion337-2017.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 337 de 2017
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/flas_juridico/2395_PGN Resoluci%C3%B3n 376 de 2019.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 376 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/portal/media/file/Resolucion 222 de 2001.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 222 de 2001
+														  </a>
+													  </li>
+													  <li>
+														  <a href="sinlink" target="_blank" style="font-size: 16px;">
+															  Resolución 1047 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.suin-juriscol.gov.co/viewDocument.asp?id=4019022" target="_blank" style="font-size: 16px;">
+															  Resolución 116 de 2010
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1367_2009.html" target="_blank" style="font-size: 16px;">
+															  Ley 1367 de 2009
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/DirectivaDDH/R-104-2017.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 104 de 2017
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/flas_juridico/1909_ACTO LEGISLATIVO N%C2%B0 01 DE 18 DE ENERO DE 2018.pdf" target="_blank" style="font-size: 16px;">
+															  Acto Legislativo 01 de 2018
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/portal/media/file/modulo_calidad/411_resolucion215-2010.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 215 de 2010
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.suin-juriscol.gov.co/viewDocument.asp?id=30035826" target="_blank" style="font-size: 16px;">
+															  Decreto 1511 de 2018
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/DirectivaDDH/R-099-2017.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 099 de 2017
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/portal/media/file/portal_doc_interes/289_RES256_01022019.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 256 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoRel&relId=MjI5ODA4&mode=1#page=inline" target="_blank" style="font-size: 16px;">
+															  Resolución 763 de 2018
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/flas_juridico/2332_PGN Resoluci%C3%B3n 260 de 2019 .pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 260 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoWeb&elementId=ALERO_MAIN::201908211046010::RELATO_DATA_TYPE&docId=7233&mode=1#page=inline,,toolbar=no,location=no,status=yes,menubar=no,resizable=yes,scrollbars=yes" target="_blank" style="font-size: 16px;">
+															  Directiva 10 de 2005
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/CODIGODISCIPLINARIO.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 456 de 2017
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1796_2016.html" target="_blank" style="font-size: 16px;">
+															  Ley 1796 de 2016
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1098_2006.html" target="_blank" style="font-size: 16px;">
+															  Ley 1098 de 2006
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1996_2019.html" target="_blank" style="font-size: 16px;">
+															  Ley 1564 de 2012
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/sim/relatoria/.webdocumento?accion=verDocumentoRel&relId=MjMxNTg0&mode=1#page=inline" target="_blank" style="font-size: 16px;">
+															  Resolución 784 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1257_2008.html" target="_blank" style="font-size: 16px;">
+															  Ley 1257 de 2008
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1336_2009.html" target="_blank" style="font-size: 16px;">
+															  Ley 1336 de 2009
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1719_2014.html" target="_blank" style="font-size: 16px;">
+															  Ley 1719 de 2014
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1761_2015.html" target="_blank" style="font-size: 16px;">
+															  Ley 1761 de 2015
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1773_2016.html" target="_blank" style="font-size: 16px;">
+															  Ley 1773 de 2016
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1959_2019.html" target="_blank" style="font-size: 16px;">
+															  Ley 1959 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.suin-juriscol.gov.co/viewDocument.asp?ruta=Decretos/1551034" target="_blank" style="font-size: 16px;">
+															  Decreto 4799 de 2011
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.suin-juriscol.gov.co/viewDocument.asp?id=30038034" target="_blank" style="font-size: 16px;">
+															  Decreto 1630 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="sinlink" target="_blank" style="font-size: 16px;">
+															  Resolución Interna No.1050 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1996_2019.html" target="_blank" style="font-size: 16px;">
+															  Ley 1996 de 2019
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1622_2013.html" target="_blank" style="font-size: 16px;">
+															  Ley 1622 de 2013
+														  </a>
+													  </li>
+													  <li>
+														  <a href="https://www.procuraduria.gov.co/relatoria/media/file/4 resolucion045-2017 cambio nombre delegadas.pdf" target="_blank" style="font-size: 16px;">
+															  Resolución 45 de 2017
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_0716_2001.html" target="_blank" style="font-size: 16px;">
+															  Ley 716 de 2001 
+														  </a>
+													  </li>
+													  <li>
+														  <a href="http://www.secretariasenado.gov.co/senado/basedoc/ley_1116_2006.html" target="_blank" style="font-size: 16px;">
+															  Ley 1116 de 2006
+														  </a>
+													  </li>
+												  </ul>
+											  </div>
+									  
+										  </div>
 										</div>
 									  </div>
-									</div>
 								  </div>
+								   <!--INICIO Buscador-->
+								   <div
+								   class="col-xs-12 col-sm-12 col-md-3 col-lg-3"
+								 >
+								 
+								   <div class="b-aside wow slideInRight">                  
+									 <div class="divFilter">
+									   <div class="panelCA">
+										 <div class="panelCAheading">
+										   Buscar en esta página...
+										 </div>
+										 <div class="panelCAbody">
+										   <input
+											 type="search"
+											 name="keyword"
+											 class="form-control input-sm"
+											 placeholder="Digite una o varias palabras..."
+											 style="border-radius: 0; width: 19em; display: inline-block; height: 34px;"
+										   />
+										   <a data-search="prev" class="btnNextPrev">&#8249;</a>
+										   <a data-search="next" class="btnNextPrev">&#8250;</a>
+										 </div>
+									   </div>
+									 </div>
+								   </div>              
+								 </div>
+									 <!--FIN Buscador-->
+								
 								</div>
-							  </section>
+						
+							 
+							
+								
+							 
                         </div>
                     </div>
                 </div>
@@ -845,22 +968,6 @@
 							<a href="https://www.procuraduria.gov.co/portal/" target="_blank">
 							<img class="img-responsive" alt="logo Procuraduría General de la Nación" title="logo Procuraduría General de la Nación" src="/assets/media/general/logo_pgn_2019-1.png" style="width: 90px;">
 						</a>
-							<!-- <div class="b-socials">
-								<ul class="list-inline">
-									<li>
-										
-											<i class="fa fa-facebook fa-fw" aria-hidden="true" title="icono"></i>
-										
-									</li>
-									<li>
-										
-											<i class="fa fa-twitter fa-fw" aria-hidden="true" title="icono"></i>
-										
-									</li>
-									
-								</ul>
-							</div> -->
-							
 							<p class="copy">
 								MANUAL DE COMPETENCIAS
 							
@@ -887,62 +994,43 @@
 									</ul>
 							</div>
 						</div>
-						
-                        <!-- <div class="col-xs-12 col-sm-4 col-md-4">
-							<div class="b-footer-box">
-								<h5 class="footer-box-title">
-									DEPENDENCIAS
-								</h5>
-								<p>
-									<a href="funcionInterventiva.html">Función Preventiva</a>
-								</p>
-								<p>
-									<a href="funciondisciplinaria.html">Función Disciplinaria</a>
-								</p>
-								<p>
-									<a href="funciondeintervencion">Función de Intervención</a>
-								</p>
-								
-							</div>
-						</div> -->
 					</div>
 				</div>
 			</div>
 		</footer>
-        <!-- MAIN SCRIPTS-->
-        <script src="assets/libs/jquery-1.12.4.min.js"></script>
-        <script src="assets/libs/jquery-migrate-1.2.1.js"></script>
-        <!-- Bootstrap-->
-        <script src="assets/libs/bootstrap/bootstrap.min.js"></script>
-        <!-- Adaptive big text -->
-        <script src="assets/plugins/slabText/js/jquery.slabtext.min.js"></script>
-        <!-- Sliders -->
-        <!-- Owl slider -->
-        <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
-        <!-- Slick slider -->
-        <script src="assets/plugins/slick/slick.min.js"></script>
-        <!-- Sly slider -->
-        <script src="assets/plugins/slyslider/sly.min.js"></script>
-        <!-- Bx slider -->
-        <script src="assets/plugins/bxslider/vendor/jquery.easing.1.3.js"></script>
-        <script src="assets/plugins/bxslider/vendor/jquery.fitvids.js"></script>
-        <script src="assets/plugins/bxslider/jquery.bxslider.min.js"></script>
-        <!-- Pop-up window-->
-        <script src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-        <!-- Headers scripts-->
-        <script src="assets/plugins/headers/slidebar.js"></script>
-        <script src="assets/plugins/headers/header.js"></script>
-        <!-- Filter and sorting images-->
-        <script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
-        <script src="assets/plugins/isotope/imagesLoaded.js"></script>
-        <!-- Progress numbers-->
-        <script src="assets/plugins/rendro-easy-pie-chart/jquery.easypiechart.min.js"></script>
-        <script src="assets/plugins/rendro-easy-pie-chart/waypoints.min.js"></script>
-        <!-- Entry Animations -->
-        <script src="assets/plugins/wow.min.js"></script>
-        <!-- Calendar plugin -->
-        <script src="assets/plugins/pickmeup/pickmeup.js"></script>
-        <!-- User customization-->
-        <script src="assets/js/custom.js"></script>
-    </body>
+      <!-- MAIN SCRIPTS-->
+    <script src="assets/libs/jquery-migrate-1.2.1.js"></script>
+    <!-- Bootstrap-->
+    <script src="assets/libs/bootstrap/bootstrap.min.js"></script>
+    <!-- Adaptive big text -->
+    <script src="assets/plugins/slabText/js/jquery.slabtext.min.js"></script>
+    <!-- Sliders -->
+    <!-- Owl slider -->
+    <script src="assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <!-- Slick slider -->
+    <script src="assets/plugins/slick/slick.min.js"></script>
+    <!-- Sly slider -->
+    <script src="assets/plugins/slyslider/sly.min.js"></script>
+    <!-- Bx slider -->
+    <script src="assets/plugins/bxslider/vendor/jquery.easing.1.3.js"></script>
+    <script src="assets/plugins/bxslider/vendor/jquery.fitvids.js"></script>
+    <script src="assets/plugins/bxslider/jquery.bxslider.min.js"></script>
+    <!-- Pop-up window-->
+    <script src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Headers scripts-->
+    <script src="assets/plugins/headers/slidebar.js"></script>
+    <script src="assets/plugins/headers/header.js"></script>
+    <!-- Filter and sorting images-->
+    <script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/plugins/isotope/imagesLoaded.js"></script>
+    <!-- Progress numbers-->
+    <script src="assets/plugins/rendro-easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="assets/plugins/rendro-easy-pie-chart/waypoints.min.js"></script>
+    <!-- Entry Animations -->
+    <script src="assets/plugins/wow.min.js"></script>
+    <!-- Calendar plugin -->
+    <script src="assets/plugins/pickmeup/pickmeup.js"></script>
+    <!-- User customization-->
+    <script src="assets/js/custom.js"></script>
+  </body>
 </html>

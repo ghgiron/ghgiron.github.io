@@ -17,7 +17,6 @@
     <style>
       #result {
         padding-left: 5px;
-
         position: absolute;
         width: 100%;
         max-width: 973px;
@@ -178,10 +177,6 @@
 
       <!-- Prueba nuevo menu -->
       <nav class="nav">
-        <!-- <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <i class="fa fa-bars" aria-hidden="true" title="icono"></i>
-        </label> -->
         <div class="logo">
           <img
             class="img"
@@ -191,7 +186,9 @@
         </div>
         <ul class="nav navbar-nav">
           <li><a href="index.html">INICIO</a></li>
-          <li><a href="factores.html">factores de competencia</a></li>
+          <li>
+            <a  href="factores.html">factores de competencia</a>
+          </li>
           <li><a href="normatividad.html">normatividad</a></li>
           <li><a class="active" href="dependencias.html">dependencias</a></li>
           <li>
@@ -200,7 +197,7 @@
             >
           </li>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown"
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"
               >directorios<span class="caret"></span
             ></a>
             <ul class="dropdown-menu">
@@ -208,15 +205,23 @@
                 <a href="notarias.html" style="line-height: 30px;">Notarías</a>
               </li>
               <li>
+                <a href="resolucion2132013.html" style="line-height: 30px;"
+                  >municipios RESOLUCION 213 DE 2003</a
+                >
+              </li>
+              <li>
                 <a href="camarascomercio.html" style="line-height: 30px;"
                   >Camaras de Comercio</a
                 >
               </li>
               <li>
-                <a href="https://www.procuraduria.gov.co/portal/sedes.page" target="_blank" style="line-height: 30px;"
+                <a
+                  href="https://www.procuraduria.gov.co/portal/sedes.page"
+                  target="_blank"
+                  style="line-height: 30px;"
                   >Procuradurías a Nivel Territorial</a
                 >
-              </li>     
+              </li>
             </ul>
           </li>
           <li>
@@ -246,7 +251,7 @@
                     <!-- begin search-banner -->
                     <div class="search-banner has-bg">
                       <div class="input-group" style="margin-bottom: 0.5px;">
-                        <form action="" class="search">
+                        <div class="search">
                           <div class="field">
                             <input
                               type="text"
@@ -257,7 +262,7 @@
                             />
                             <label for="search">Buscar...</label>
                           </div>
-                        </form>
+                        </div>
                       </div>
                     </div>
                     <!-- end search-banner -->

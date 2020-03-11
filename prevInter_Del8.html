@@ -13,6 +13,8 @@
     <link rel="icon" type="image/x-icon" href="favicon.png" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
+    <script src="assets/libs/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.mark.min.js"></script>
     <script type="text/javascript">
       $(window).on("scroll", function() {
         if ($(window).scrollTop()) {
@@ -32,6 +34,104 @@
         else $(".img").attr("src", initialSrc);
       });
     </script>
+    <!-- buscador interno -->
+    <style id="filter">
+      mark {
+        background: yellow;
+      }
+
+      mark.current {
+        background: orange;
+      }
+    </style>
+
+    <script>
+      window.onload = function() {
+        $(function() {
+          // the input field
+          var $input = $("input[type='search']"),
+            // clear button
+            $clearBtn = $("button[data-search='clear']"),
+            // prev button
+            $prevBtn = $("a[data-search='prev']"),
+            // next button
+            $nextBtn = $("a[data-search='next']"),
+            // the context where to search
+            $content = $(".b-layer-main"),
+            // jQuery object to save <mark> elements
+            $results,
+            // the class that will be appended to the current
+            // focused element
+            currentClass = "current",
+            // top offset for the jump (the search bar)
+            offsetTop = 130,
+            // the current index of the focused element
+            currentIndex = 0;
+
+          /**
+           * Jumps to the element matching the currentIndex
+           */
+          function jumpTo() {
+            if ($results.length) {
+              var position,
+                $current = $results.eq(currentIndex);
+              $results.removeClass(currentClass);
+              if ($current.length) {
+                $current.addClass(currentClass);
+                position = $current.offset().top - offsetTop;
+                window.scrollTo(0, position);
+                console.log(position);
+              }
+            }
+          }
+
+          /**
+           * Searches for the entered keyword in the
+           * specified context on input
+           */
+          $input.on("input", function() {
+            var searchVal = this.value;
+            $content.unmark({
+              done: function() {
+                $content.mark(searchVal, {
+                  separateWordSearch: true,
+                  done: function() {
+                    $results = $content.find("mark");
+                    currentIndex = 0;
+                    jumpTo();
+                  }
+                });
+              }
+            });
+          });
+
+          /**
+           * Clears the search
+           */
+          $clearBtn.on("click", function() {
+            $content.unmark();
+            $input.val("").focus();
+          });
+
+          /**
+           * Next and previous search jump to
+           */
+          $nextBtn.add($prevBtn).on("click", function() {
+            if ($results.length) {
+              currentIndex += $(this).is($prevBtn) ? -1 : 1;
+              if (currentIndex < 0) {
+                currentIndex = $results.length - 1;
+              }
+              if (currentIndex > $results.length - 1) {
+                currentIndex = 0;
+              }
+              jumpTo();
+            }
+          });
+        });
+      };
+    </script>
+    <!-- fin buscador interno -->
     <script type="text/javascript">
       $(function() {
         // activate scrollspy on sections side navigation
@@ -70,10 +170,6 @@
 
       <!-- Prueba nuevo menu -->
       <nav class="nav">
-        <!-- <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <i class="fa fa-bars" aria-hidden="true" title="icono"></i>
-        </label> -->
         <div class="logo">
           <img
             class="img"
@@ -83,7 +179,9 @@
         </div>
         <ul class="nav navbar-nav">
           <li><a href="index.html">INICIO</a></li>
-          <li><a href="factores.html">factores de competencia</a></li>
+          <li>
+            <a  href="factores.html">factores de competencia</a>
+          </li>
           <li><a href="normatividad.html">normatividad</a></li>
           <li><a class="active" href="dependencias.html">dependencias</a></li>
           <li>
@@ -92,7 +190,7 @@
             >
           </li>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown"
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"
               >directorios<span class="caret"></span
             ></a>
             <ul class="dropdown-menu">
@@ -100,18 +198,32 @@
                 <a href="notarias.html" style="line-height: 30px;">Notarías</a>
               </li>
               <li>
+                <a href="resolucion2132013.html" style="line-height: 30px;"
+                  >municipios RESOLUCION 213 DE 2003</a
+                >
+              </li>
+              <li>
                 <a href="camarascomercio.html" style="line-height: 30px;"
                   >Camaras de Comercio</a
                 >
               </li>
               <li>
-                <a href="https://www.procuraduria.gov.co/portal/sedes.page" target="_blank" style="line-height: 30px;"
+                <a
+                  href="https://www.procuraduria.gov.co/portal/sedes.page"
+                  target="_blank"
+                  style="line-height: 30px;"
                   >Procuradurías a Nivel Territorial</a
                 >
-              </li>   
+              </li>
             </ul>
           </li>
-          <li ><a  href="assets/plugins/pdfjs/web/viewer.html?file=manualcompetencias.pdf" target="_blank">DOCUMENTO PDF</a></li>
+          <li>
+            <a
+              href="assets/plugins/pdfjs/web/viewer.html?file=manualcompetencias.pdf"
+              target="_blank"
+              >DOCUMENTO PDF</a
+            >
+          </li>
         </ul>
       </nav>
       <!-- fin prueba nuevo mnenu -->
@@ -164,9 +276,7 @@
             <li>
               <a href="#sec2"><span>Función Preventiva</span></a>
             </li>
-            <li>
-              <a href="#sec3"><span>Dependencias Relacionadas</span></a>
-            </li>
+           
           </ul>
         </div>
         <div class="b-layer-main">
@@ -385,77 +495,33 @@ Así mismo, en materia mercantil, en lo que tiene que ver con conflictos en esta
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-lg-offset-1"
-                  >
-                    <div class="b-aside wow slideInRight">
-                      <div class="b-search-add">
-                        <form id="search-additional-form" class="form-aside">
-                          <input
-                            type="text"
-                            placeholder="Buscar..."
-                            class="form-control"
-                          />
-                          <button class="aside-submit">
-                            <i class="icon fa fa-search" aria-hidden="true" title="icono"></i>
-                          </button>
-                        </form>
-                      </div>
-
-                      <!-- <div class="b-aside-item">
-                        <div class="aside-categories">
-                          <h5 class="aside-title">
-                            Etiquetas
-                            <i class="fa fa-align-left" aria-hidden="true" title="icono"></i>
-                          </h5>
-                          <ul class="list-unstyled">
-                            <li>
-                              <a href="#"
-                                >Todo
-                                <span class="categories-counter">122</span></a
-                              >
-                            </li>
-                            <li>
-                              <a href="#"
-                                >Alcaldes
-                                <span class="categories-counter">31</span></a
-                              >
-                            </li>
-                            <li>
-                              <a href="#"
-                                >Universidades
-                                <span class="categories-counter">21</span></a
-                              >
-                            </li>
-                            <li>
-                              <a href="#"
-                                >Estudiantes
-                                <span class="categories-counter">13</span></a
-                              >
-                            </li>
-                            <li>
-                              <a href="#"
-                                >Gobernadores
-                                <span class="categories-counter">45</span></a
-                              >
-                            </li>
-                            <li>
-                              <a href="#"
-                                >Gremios
-                                <span class="categories-counter">9</span></a
-                              >
-                            </li>
-                            <li>
-                              <a href="#"
-                                >Asociaciones
-                                <span class="categories-counter">15</span></a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </div> -->
-                    </div>
+            <!--INICIO Buscador-->
+            <div
+            class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-lg-offset-1"
+          >
+          
+            <div class="b-aside wow slideInRight">                  
+              <div class="divFilter">
+                <div class="panelCA">
+                  <div class="panelCAheading">
+                    Buscar en esta página...
                   </div>
+                  <div class="panelCAbody">
+                    <input
+                      type="search"
+                      name="keyword"
+                      class="form-control input-sm"
+                      placeholder="Digite una o varias palabras..."
+                      style="border-radius: 0; width: 19em; display: inline-block; height: 34px;"
+                    />
+                    <a data-search="prev" class="btnNextPrev">&#8249;</a>
+                    <a data-search="next" class="btnNextPrev">&#8250;</a>
+                  </div>
+                </div>
+              </div>
+            </div>              
+          </div>
+              <!--FIN Buscador-->
                 </div>
               </section>
               <section id="sec2">
@@ -543,275 +609,7 @@ Así mismo, en materia mercantil, en lo que tiene que ver con conflictos en esta
               </section>
      
             </div>
-            <section id="sec3">
-              <div class="row">
-                 <!-- <div class="b-latest">
-              <div class="b-title-head">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                      <div class="pull-left">
-                        <h3 class="big-title-mod">
-                          Otras Dependencias
-                        </h3>
-                      </div>
-                      <div class="pull-right">
-                        <a href="index.html" class="btn btn-primary">INICIO</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> 
-             
-               <div class="b-slick-holder wow fadeInUp">
-                <div class="b-latest-carousel clearfix">
-                  <div class="latest-carousel-item">
-                    <div class="blog-item-content clearfix">
-                      <a
-                        href="blog-single.html"
-                        title="Dirección Nacional de Investigaciones Especiales"
-                        class="blog-item-img"
-                      >
-                        <img
-                          src="assets/media/components/b-blog/imgCard1.jpg"
-                          alt="Dirección Nacional de Investigaciones Especiales"
-                          class="img-responsive"
-                        />
-                        <span class="blog-category">Preventiva</span>
-                      </a>
-                      <div class="blog-item-caption">
-                        <h4 class="item-name">
-                          <a
-                            href="prev_Del1.html"
-                            target="_blank"
-                            title="Dirección Nacional de Investigaciones Especiales"
-                            >Dirección Nacional de Investigaciones Especiales</a
-                          >
-                        </h4>
-                        <p class="item-description">
-                          <b>Competencias</b> <br />
-                          Decreto 262 de 2000, Resolución 166 de 2003, Ley 734
-                          de 2002.
-                        </p>
-                        <a
-                          href="prev_Del1.html"
-                          target="_blank"
-                          title="Leer más"
-                          class="item-read-more"
-                          >...</a
-                        >
-                      </div>
-                    </div>
-                    <div class="blog-item-content clearfix">
-                      <a
-                        href="blog-single.html"
-                        title="Procuraduría 2 Delegada ante el Consejo de Estado"
-                        class="blog-item-img"
-                      >
-                        <img
-                          src="assets/media/components/b-blog/imgCard1.jpg"
-                          alt="Procuraduría 2 Delegada ante el Consejo de Estado"
-                          class="img-responsive"
-                        />
-                        <span class="blog-category">Intervención</span>
-                      </a>
-                      <div class="blog-item-caption">
-                        <h4 class="item-name">
-                          <a
-                            href="inter_Del2.html"
-                            target="_blank"
-                            title="Procuraduría 2 Delegada ante el Consejo de Estado"
-                            >Procuraduría 2 Delegada ante el Consejo de
-                            Estado</a
-                          >
-                        </h4>
-                        <p class="item-description">
-                          <b>Competencias</b> <br />
-                          Decreto 262 de 2000, Resolución 017 de 2000,
-                          Resolución 371 de 2005, Resolución 194 de 2011,
-                           <br />Ley 1437 de 2011
-                        </p>
-                        <a
-                          href="inter_Del2.html"
-                          target="_blank"
-                          title="Leer más"
-                          class="item-read-more"
-                          >...</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="latest-carousel-item">
-                    <div class="blog-item-content clearfix">
-                      <a
-                        href="blog-single.html"
-                        title="Procuraduría Delegada ante el Consejo de Estado"
-                        class="blog-item-img"
-                      >
-                        <img
-                          src="assets/media/components/b-blog/imgCard1.jpg"
-                          alt="Procuraduría Delegada para la Fuerza Pública y la Policía Judicial"
-                          class="img-responsive"
-                        />
-                        <span class="blog-category">Disciplinaria</span>
-                      </a>
-                      <div class="blog-item-caption">
-                        <h4 class="item-name">
-                          <a
-                            href="disc_Del1.html"
-                            target="_blank"
-                            title="Procuraduría Delegada ante el Consejo de Estado"
-                            >Procuraduría Delegada para la Fuerza Pública y la
-                            Policía Judicial</a
-                          >
-                        </h4>
-                        <p class="item-description">
-                          <b>Competencias</b> <br />
-                          Decreto 262 de 2000, Ley 734 de 2002, Resolución 017
-                          de 2000, Resolución 138 de 2018.
-                        </p>
-                        <a
-                          href="disc_Del1.html"
-                          target="_blank"
-                          title="Leer más"
-                          class="item-read-more"
-                          >...</a
-                        >
-                      </div>
-                    </div>
-                    <div class="blog-item-content clearfix">
-                      <a
-                        href="blog-single.html"
-                        title="Procuraduría 1 Delegada ante el Consejo de Estado"
-                        class="blog-item-img"
-                      >
-                        <img
-                          src="assets/media/components/b-blog/imgCard1.jpg"
-                          alt="Procuraduría 1 Delegada ante el Consejo de Estado"
-                          class="img-responsive"
-                        />
-                        <span class="blog-category">Intervención</span>
-                      </a>
-                      <div class="blog-item-caption">
-                        <h4 class="item-name">
-                          <a
-                            href="inter_Del1.html"
-                            target="_blank"
-                            title="Procuraduría 1 Delegada ante el Consejo de Estado"
-                            >Procuraduría 1 Delegada ante el Consejo de
-                            Estado</a
-                          >
-                        </h4>
-                        <p class="item-description">
-                          <b>Competencias</b> <br />
-                          Decreto 262 de 2000, Resolución 017 de 2000,
-                          Resolución 371 de 2005, Resolución 194 de 2011,
-                           <br />Ley 1437 de 2011
-                        </p>
-                        <a
-                          href="inter_Del1.html"
-                          target="_blank"
-                          title="Leer más"
-                          class="item-read-more"
-                          >...</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="latest-carousel-item">
-                    <div class="blog-item-content clearfix">
-                      <a
-                        href="blog-single.html"
-                        title="Procuraduría 3 Delegada ante el Consejo de Estado"
-                        class="blog-item-img"
-                      >
-                        <img
-                          src="assets/media/components/b-blog/imgCard1.jpg"
-                          alt="Procuraduría 3 Delegada ante el Consejo de Estado"
-                          class="img-responsive"
-                        />
-                        <span class="blog-category">Intervención</span>
-                      </a>
-                      <div class="blog-item-caption">
-                        <h4 class="item-name">
-                          <a
-                            href="inter_Del3.html"
-                            target="_blank"
-                            title="Procuraduría 3 Delegada ante el Consejo de Estado"
-                            >Procuraduría 3 Delegada ante el Consejo de
-                            Estado</a
-                          >
-                        </h4>
-                        <p class="item-description">
-                          <b>Competencias</b> <br />
-                          Decreto 262 de 2000, Resolución 017 de 2000,
-                          Resolución 371 de 2005, Resolución 194 de 2011,
-                           <br />Ley 1437 de 2011
-                        </p>
-                        <a
-                          href="inter_Del3.html"
-                          target="_blank"
-                          title="Leer más"
-                          class="item-read-more"
-                          >...</a
-                        >
-                      </div>
-                    </div>
-                    <div class="blog-item-content clearfix">
-                      <a
-                        href="blog-single.html"
-                        title="Procuraduría 4 Delegada ante el Consejo de Estado"
-                        class="blog-item-img"
-                      >
-                        <img
-                          src="assets/media/components/b-blog/imgCard1.jpg"
-                          alt="Procuraduría 4 Delegada ante el Consejo de Estado"
-                          class="img-responsive"
-                        />
-                        <span class="blog-category">Intervención</span>
-                      </a>
-                      <div class="blog-item-caption">
-                        <h4 class="item-name">
-                          <a
-                            href="inter_Del4.html"
-                            target="_blank"
-                            title="Procuraduría 4 Delegada ante el Consejo de Estado"
-                            >Procuraduría 4 Delegada ante el Consejo de
-                            Estado</a
-                          >
-                        </h4>
-                        <p class="item-description">
-                          <b>Competencias</b> <br />
-                          Decreto 262 de 2000, Resolución 017 de 2000,
-                          Resolución 371 de 2005, Resolución 194 de 2011,
-                           <br />Ley 1437 de 2011
-                        </p>
-                        <a
-                          href="inter_Del4.html"
-                          target="_blank"
-                          title="Leer más"
-                          class="item-read-more"
-                          >...</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="b-slick-arrows">
-                  <div class="custom-slideshow-controls">
-                    <span id="slick-slideshow-prev" class="slick-arrows-prev"
-                      ><i class="fa fa-angle-left" aria-hidden="true"></i
-                    ></span>
-                    <span id="slick-slideshow-next" class="slick-arrows-next"
-                      ><i class="fa fa-angle-right" aria-hidden="true"></i
-                    ></span>
-                  </div>
-                </div>
-              </div> 
-            
-            </div> -->
-              </div>
-            </section>
+     
           </div>
         </div>
       </div>
@@ -895,7 +693,7 @@ Así mismo, en materia mercantil, en lo que tiene que ver con conflictos en esta
       </div>
     </footer>
     <!-- MAIN SCRIPTS-->
-    <script src="assets/libs/jquery-1.12.4.min.js"></script>
+    
     <script src="assets/libs/jquery-migrate-1.2.1.js"></script>
     <!-- Bootstrap-->
     <script src="assets/libs/bootstrap/bootstrap.min.js"></script>

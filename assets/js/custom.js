@@ -178,7 +178,7 @@ if ($('.player').length > 0) {
               delegate: '.js-zoom-gallery__item', // the selector for gallery item
               type: 'image',
               gallery: {
-                enabled:true
+                enabled:false
               }
           });
       });

@@ -13,6 +13,63 @@
     <link rel="icon" type="image/x-icon" href="favicon.png" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
+    <script>
+      function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[3];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+          } else {
+          tr[i].style.display = "none";
+          }
+        }       
+        }
+      }
+      </script>
+<style>
+   .search {
+        width: 100%;
+      }
+      .search .field {
+        position: relative;
+      }
+      .search label {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAAxElEQVR4AXXPIUuDcRDA4Zv4AUSwTLEKVoNlySyCYLO98CCsahGrX0AW/QhmBRHEJghLS4JFBBXDgrJi2In78w8v4v3S8XDh4nd0DTxLEzd2RC2EnrH07trQVDrXqbhs7FvfnBDWDKWTigOpL2oWvZpYKPjio1zVHEt7BdOtaLUtHRX8MmqjRjooeCVttPBOWi+4JT1aLaDjVLpU/5ytn840Dj1IaWSpYmi8yVlTF54qh9K8nn27usJK5fC3yvfhPx7a/AE9dYwDEfKrlAAAAABJRU5ErkJggg==)
+          no-repeat 0 50%;
+        color: #b2b2b2;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        transition: left 0.4s, transform 0.4s;
+        padding-left: 1.25em;
+      }
+      .search .input-search {
+        border: 1px solid #dfdfdf;
+        border-radius: 0.25em;
+        box-shadow: 0 1px 0 #bfbebf;
+        display: block;
+        font: 400 1em/1.5em sans-serif;
+        padding: 0.5em 1.75em;
+        width: 100%;
+        color: dimgray;
+      }
+      .search .input-search:focus + label,
+      .search .input-search:valid + label {
+        left: 0.5em;
+        transform: translate(0, -50%);
+      }
+      .search .input-search:valid + label {
+        text-indent: -9999px;
+      }
+</style>
     <script type="text/javascript">
       $(window).on("scroll", function() {
         if ($(window).scrollTop()) {
@@ -53,10 +110,6 @@
 
       <!-- Prueba nuevo menu -->
       <nav class="nav">
-        <!-- <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <i class="fa fa-bars" aria-hidden="true" title="icono"></i>
-        </label> -->
         <div class="logo">
           <img
             class="img"
@@ -66,25 +119,27 @@
         </div>
         <ul class="nav navbar-nav">
           <li><a href="index.html">INICIO</a></li>
-          <li><a href="factores.html">factores de competencia</a></li>
+          <li>
+            <a  href="factores.html">factores de competencia</a>
+          </li>
           <li><a href="normatividad.html">normatividad</a></li>
-          <li><a href="dependencias.html">dependencias</a></li>
+          <li><a  href="dependencias.html">dependencias</a></li>
           <li>
             <a href="estructuraestado.html"
               >estructura del estado y de la pgn</a
             >
           </li>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown"
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"
               >directorios<span class="caret"></span
             ></a>
             <ul class="dropdown-menu">
               <li>
-                <a
-                  class="active"
-                  href="notarias.html"
-                  style="line-height: 30px;"
-                  >Notarías</a
+                <a class="active" href="notarias.html" style="line-height: 30px;">Notarías</a>
+              </li>
+              <li>
+                <a href="resolucion2132013.html" style="line-height: 30px;"
+                  >municipios RESOLUCION 213 DE 2003</a
                 >
               </li>
               <li>
@@ -93,10 +148,13 @@
                 >
               </li>
               <li>
-                <a href="https://www.procuraduria.gov.co/portal/sedes.page" target="_blank" style="line-height: 30px;"
+                <a
+                  href="https://www.procuraduria.gov.co/portal/sedes.page"
+                  target="_blank"
+                  style="line-height: 30px;"
                   >Procuradurías a Nivel Territorial</a
                 >
-              </li>     
+              </li>
             </ul>
           </li>
           <li>
@@ -150,7 +208,23 @@
           </div>
           <div class="b-blog-single">
             <section>
+              <div  class="search">
+                <div class="field">
+                  <input
+                  onkeyup="myFunction()" 
+                    type="text"
+                    class="input-search"
+                    id="myInput"
+                    name="myInput"
+                    required
+                    title="Busque por nombre de notaría"
+                  />
+                  <label for="search">Busque por nombre de notaría</label>
+                </div>
+              </div>
+              
               <div class="tbl-header">
+                
                 <table>
                   <thead>
                     <tr>
@@ -169,7 +243,7 @@
                 </table>
               </div>
               <div class="tbl-content">
-                <table class=" table-hover table-hover-cells">
+                <table id="myTable" class=" table-hover table-hover-cells">
                   <tbody>
                     <tr>
                       <td>ANTIOQUIA</td>
