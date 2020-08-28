@@ -3,18 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Pagina de inicio - Manual de Competencias de la Procuraduría General de la Nación</title>
+    <title>
+      Pagina de inicio - Manual de Competencias de la Procuraduría General de la
+      Nación
+    </title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta content="telephone=no" name="format-detection" />
     <meta name="HandheldFriendly" content="true" />
     <link rel="stylesheet" href="assets/css/master.css" />
+    <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="icon" type="image/x-icon" href="favicon.png" />
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-
+    <script src="assets/libs/jquery-1.12.4.min.js"></script>
+  
     <script>
-      $(window).on("scroll", function() {
+      $(window).on("scroll", function () {
         if ($(window).scrollTop()) {
           $("nav").addClass("classNav1");
         } else {
@@ -25,14 +29,13 @@
     <script>
       var initialSrc = "assets/media/general/logo_pgn_2019-blanco.png";
       var scrollSrc = "assets/media/general/logo_pgn_2019-1.png";
-
-      $(window).scroll(function() {
+      $(window).scroll(function () {
         var value = $(this).scrollTop();
         if (value > 100) $(".img").attr("src", scrollSrc);
         else $(".img").attr("src", initialSrc);
       });
     </script>
-  </head>
+ </head>
   <body>
     <div class="b-page-wrap">
       <!-- Loader-->
@@ -40,7 +43,6 @@
         <div class="loader-wrap"><span class="loader02"></span></div>
       </div>
       <!-- Loader end-->
-
       <!-- Prueba nuevo menu -->
       <nav class="nav">
         <div class="logo">
@@ -51,7 +53,12 @@
             longdesc="../html/descripciones_imagenes/descripcion-grafica-protocoloAT.html"
           />
         </div>
-        <ul class="nav navbar-nav">
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+          <i class="fa fa-bars"></i>
+        </label>
+        <ul>
+      
           <li><a class="active" href="index.html">INICIO</a></li>
           <li>
             <a  href="factores.html">factores de competencia</a>
@@ -100,7 +107,8 @@
           </li>
         </ul>
       </nav>
-      <!-- fin prueba nuevo mnenu -->
+
+<!-- fin prueba nuevo mnenu -->
 
       <div class="b-page-content with-layer-bg">
         <!-- ==========================-->
@@ -112,12 +120,12 @@
               <div class="container wow slideInUp">
                 <div class="row">
                   <div class="col-xs-12 col-sm-12 text-center">
-                    <h1 class="main-heading">                      
+                    <h1 class="main-heading">
                       Manual de Competencias
                     </h1>
-                    <p class="heading-text">              
-                        Bienvenido al Manual de Competencias de la Procuraduría
-                        General de la Naciónnnnnnn             
+                    <p class="heading-text">
+                      Bienvenido al Manual de Competencias de la Procuraduría
+                      General de la Nación
                     </p>
                   </div>
                 </div>
@@ -126,7 +134,7 @@
           </div>
         </div>
         <div class="b-layer-main">
-         <!-- <div class="page-arrow">
+          <!-- <div class="page-arrow">
              <i class="fa fa-angle-down" aria-hidden="true" ></i> 
           </div>-->
           <div class="b-about">
@@ -139,22 +147,23 @@
                       Manual de Competencias
                     </p> -->
                     <div class="text-center">
-                      <div role="heading" class="big-title-mod" style="margin-bottom: 1%;">
+                      <div
+                        role="heading"
+                        class="big-title-mod"
+                        style="margin-bottom: 1%;"
+                      >
                         ¿Qué es la Procuraduría General de la Nación?
                       </div>
                       <div class="big-title-text">
-                        
-                          La PGN, es la Entidad que representa a los ciudadanos
-                          ante el Estado. Es el máximo organismo del Ministerio
-                          Público, que, en cumplimiento del ordenamiento
-                          constitucional, ejerce la supervigilancia de la
-                          conducta de los servidores públicos, la defensa del
-                          orden jurídico, del patrimonio público, de los
-                          intereses de la sociedad y vela por la protección de
-                          los derechos humanos.
-                        
+                        La PGN, es la Entidad que representa a los ciudadanos
+                        ante el Estado. Es el máximo organismo del Ministerio
+                        Público, que, en cumplimiento del ordenamiento
+                        constitucional, ejerce la supervigilancia de la conducta
+                        de los servidores públicos, la defensa del orden
+                        jurídico, del patrimonio público, de los intereses de la
+                        sociedad y vela por la protección de los derechos
+                        humanos.
                       </div>
-                
                     </div>
                   </div>
                 </div>
@@ -183,7 +192,7 @@
               </div>
               <div class="right-side pull-right wow slideInRight">
                 <!-- Quote -->
-                <div class="b-quote ">
+                <div class="b-quote">
                   <blockquote class="b-quote-caption clearfix">
                     <p role="heading" class="quote-title">
                       ¿Qué hacemos?
@@ -240,14 +249,12 @@
                       <p class="quote-text">
                         Para el ejercicio de actividad misional, la PGN ejerce 3
                         funciones principales,
-                        <em> preventiva, de intervención y disciplinaria;</em> (i)
-                        Preventiva, en la cual la PGN busca anticiparse y evitar
-                        la ocurrencia de hechos que afecten los derechos de las
-                        personas mediante la detección y advertencia temprana de
-                        riesgos en la gestión pública; (ii)
-                        <em>
-                          intervención y de conciliación,</em
-                        >
+                        <em> preventiva, de intervención y disciplinaria;</em>
+                        (i) Preventiva, en la cual la PGN busca anticiparse y
+                        evitar la ocurrencia de hechos que afecten los derechos
+                        de las personas mediante la detección y advertencia
+                        temprana de riesgos en la gestión pública; (ii)
+                        <em> intervención y de conciliación,</em>
                         que consiste por un lado, en intervenir ante los
                         despachos judiciales en pro del debido proceso y el
                         ordenamiento jurídico (cleraen defensa de los más
@@ -256,10 +263,10 @@
                         personas y el Estado, en aras de descongestionar los
                         estrados judiciales y reducir tiempos y recursos para
                         todas las partes; y (iii)
-                        <em>disciplinaria</em>, que consiste en la aplicación del
-                        Código Único Disciplinario a los funcionarios públicos y
-                        los particulares que ejercen funciones públicas o
-                        manejen dineros del Estado.
+                        <em>disciplinaria</em>, que consiste en la aplicación
+                        del Código Único Disciplinario a los funcionarios
+                        públicos y los particulares que ejercen funciones
+                        públicas o manejen dineros del Estado.
                       </p>
                       <br />
                       <p class="quote-text">
@@ -349,7 +356,7 @@
                       </li>
                       <li role="presentation">
                         <a
-                        href="#facilidad"
+                          href="#facilidad"
                           style="cursor: pointer;"
                           aria-controls="facilidad"
                           role="tab"
@@ -445,7 +452,6 @@
                               dependencia de la PGN, acceder a la normatividad y
                               demás documentos de interés .
                             </p>
- 
                           </div>
                         </div>
                       </div>
@@ -455,7 +461,7 @@
               </div>
             </div>
             <!-- fin tabs -->
-         
+
             <!-- My recent works -->
             <!-- <div class="b-recent-works wow fadeInUp">
               <div class="container">
@@ -488,7 +494,6 @@
                   longdesc="../html/descripciones_imagenes/descripcion-grafica-protocoloAT.html"
                 />
               </a>
-           
 
               <p class="copy">
                 MANUAL DE COMPETENCIAS
@@ -519,8 +524,6 @@
                 </ul>
               </div>
             </div>
-
-        
           </div>
         </div>
       </div>
